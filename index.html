@@ -85,11 +85,15 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
 .ct-m{background:#e3b34122;color:#e3b341}
 .ct-l{background:#3fb95022;color:#3fb950}
 .ct-f{background:#8b5cf622;color:#8b5cf6}
+.audit-ok{color:#3fb950;font-weight:700;cursor:help}
+.audit-warn{color:#e3b341;font-weight:700;cursor:help}
+.audit-none{color:#484f58;cursor:help}
+.hour-select{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:6px 8px;font-size:.82em;min-width:110px}
 </style>
 </head>
 <body>
 <h1>🔧 Steve's LLM Spend Dashboard <button class="info-btn" onclick="openM()">i</button></h1>
-<p class="sub-title">OpenClaw session logs · Updated: <span id="ts"></span></p>
+<p class="sub-title">OpenClaw session logs · All times <span id="tz-label">ET</span> · Updated: <span id="ts"></span></p>
 <div class="cards" id="cards"></div>
 <div class="section">
   <div class="sec-head">
@@ -133,6 +137,34 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
         <span class="cal-icon">&#128197;</span>
       </div>
     </div>
+    <div class="filter-group" id="hour-filter-row" style="display:none">
+      <label>Hour Range (ET)</label>
+      <div style="display:flex;gap:4px;align-items:center">
+        <select id="fh1" class="hour-select" onchange="onFilterChange()">
+          <option value="">From</option>
+          <option value="0">12:00 AM</option><option value="1">1:00 AM</option><option value="2">2:00 AM</option>
+          <option value="3">3:00 AM</option><option value="4">4:00 AM</option><option value="5">5:00 AM</option>
+          <option value="6">6:00 AM</option><option value="7">7:00 AM</option><option value="8">8:00 AM</option>
+          <option value="9">9:00 AM</option><option value="10">10:00 AM</option><option value="11">11:00 AM</option>
+          <option value="12">12:00 PM</option><option value="13">1:00 PM</option><option value="14">2:00 PM</option>
+          <option value="15">3:00 PM</option><option value="16">4:00 PM</option><option value="17">5:00 PM</option>
+          <option value="18">6:00 PM</option><option value="19">7:00 PM</option><option value="20">8:00 PM</option>
+          <option value="21">9:00 PM</option><option value="22">10:00 PM</option><option value="23">11:00 PM</option>
+        </select>
+        <span style="color:#8b949e">–</span>
+        <select id="fh2" class="hour-select" onchange="onFilterChange()">
+          <option value="">To</option>
+          <option value="0">12:00 AM</option><option value="1">1:00 AM</option><option value="2">2:00 AM</option>
+          <option value="3">3:00 AM</option><option value="4">4:00 AM</option><option value="5">5:00 AM</option>
+          <option value="6">6:00 AM</option><option value="7">7:00 AM</option><option value="8">8:00 AM</option>
+          <option value="9">9:00 AM</option><option value="10">10:00 AM</option><option value="11">11:00 AM</option>
+          <option value="12">12:00 PM</option><option value="13">1:00 PM</option><option value="14">2:00 PM</option>
+          <option value="15">3:00 PM</option><option value="16">4:00 PM</option><option value="17">5:00 PM</option>
+          <option value="18">6:00 PM</option><option value="19">7:00 PM</option><option value="20">8:00 PM</option>
+          <option value="21">9:00 PM</option><option value="22">10:00 PM</option><option value="23">11:00 PM</option>
+        </select>
+      </div>
+    </div>
     <div class="filter-group" style="justify-content:flex-end">
       <button class="clr-btn" onclick="clrF()">Clear</button>
     </div>
@@ -170,15 +202,25 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
         <tr><td>gemini-2.5-pro</td><td>Google</td><td>$1.25</td><td>$10.00</td><td><span class="ct ct-m">MID</span></td></tr>
         <tr><td>gemini-2.5-flash</td><td>Google</td><td>$0.30</td><td>$2.50</td><td><span class="ct ct-l">LOW</span></td></tr>
         <tr><td>sonar-pro (web_search)</td><td>Perplexity</td><td colspan="2">~$0.005/call <span class="est-tag">EST</span></td><td><span class="ct ct-l">LOW</span></td></tr>
-        <tr><td>llama-3.3-70b</td><td>Groq / OpenRouter</td><td colspan="2">$0.00 (free tiers)</td><td><span class="ct ct-f">FREE</span></td></tr>
+        <tr><td>llama-3.3-70b:free</td><td>OpenRouter</td><td colspan="2">$0.00 (free tier)</td><td><span class="ct ct-f">FREE</span></td></tr>
+        <tr><td>deepseek-chat</td><td>OpenRouter</td><td>$0.14</td><td>$0.28</td><td><span class="ct ct-l">LOW</span></td></tr>
+        <tr><td>llama-3.3-70b</td><td>Groq</td><td colspan="2">$0.00 (free tier)</td><td><span class="ct ct-f">FREE</span></td></tr>
         <tr><td>qwen2.5 / llama3.2</td><td>Ollama (local)</td><td colspan="2">$0.00</td><td><span class="ct ct-f">FREE</span></td></tr>
       </tbody>
     </table>
     <h3>Cost Calculation</h3>
     <p>Costs for Anthropic and Google are calculated by OpenClaw's billing layer at response time and stored in session JSONL. This dashboard reads those pre-calculated values. Cache read tokens billed at ~10% of input rate. Google implicit caching (auto since May 2025) already reflected in amounts.</p>
+    <h3>Audit Column</h3>
+    <p>The <strong>Audit</strong> column in the daily table cross-references JSONL-derived costs against provider billing APIs:</p>
+    <p><span class="audit-ok">✓</span> = Anthropic Admin API confirmed (delta &lt;5%)</p>
+    <p><span class="audit-warn">⚠</span> = Mismatch detected between JSONL and billing API</p>
+    <p><span class="audit-none">—</span> = No billing API available (Google, OpenRouter, etc.)</p>
+    <h3>Timezone</h3>
+    <p>All dates and hours are displayed in <strong>Eastern Time</strong> (EST/EDT). The system auto-adjusts for daylight saving time using <code>America/Toronto</code>.</p>
   </div>
 </div>
 <script src="usage_data.js"></script>
+<script src="audit-anthropic.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
