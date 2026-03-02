@@ -152,8 +152,6 @@ function onFilterChange(){cPage=0;render()}
 
 // ─── HOUR FILTER (only for hourly view) ──────────────────────
 function buildHourFilter(){
-  var fh=document.getElementById('fh');
-  if(!fh)return;
   // Show/hide hour filter row based on view
   var hourRow=document.getElementById('hour-filter-row');
   if(hourRow) hourRow.style.display=(view==='hourly'?'flex':'none');
