@@ -186,20 +186,39 @@ function setView(v){
   render();
 }
 
+// Model name mapping: JSONL name → Anthropic API name(s)
+var AUDIT_MODEL_MAP={
+  'claude-haiku-4-5':['claude-haiku-4-5','claude-3-haiku-20240307'],
+  'claude-sonnet-4-6':['claude-sonnet-4-6','claude-sonnet-4-20250514'],
+  'claude-opus-4-6':['claude-opus-4-6']
+};
+function findAuditEntry(date, model){
+  if(!ANTHROPIC_AUDIT||!ANTHROPIC_AUDIT[date]) return null;
+  // Direct match first
+  if(ANTHROPIC_AUDIT[date][model]) return ANTHROPIC_AUDIT[date][model];
+  // Try mapped names
+  var aliases=AUDIT_MODEL_MAP[model]||[];
+  for(var i=0;i<aliases.length;i++){
+    if(ANTHROPIC_AUDIT[date][aliases[i]]) return ANTHROPIC_AUDIT[date][aliases[i]];
+  }
+  return null;
+}
+
 // Audit badge helper
 function auditBadge(date, model, cost_usd){
   // Check if Anthropic audit data covers this date+model
-  if(ANTHROPIC_AUDIT && ANTHROPIC_AUDIT[date] && ANTHROPIC_AUDIT[date][model]){
-    var a=ANTHROPIC_AUDIT[date][model];
-    var diff=Math.abs((a.cost||0)-cost_usd);
+  var auditEntry=findAuditEntry(date, model);
+  if(auditEntry){
+    var diff=Math.abs((auditEntry.cost||0)-cost_usd);
     var pct=cost_usd>0?diff/cost_usd:0;
     if(pct<0.05){
-      return '<span class="audit-ok" title="Anthropic Admin API confirmed · delta &lt;5%">✓</span>';
+      return '<span class="audit-ok" title="Anthropic Admin API confirmed · delta &lt;5%">✅</span>';
     } else {
-      return '<span class="audit-warn" title="Anthropic Admin API: '+fmt$(a.cost)+' vs log '+fmt$(cost_usd)+'">⚠</span>';
+      return '<span class="audit-warn" title="Anthropic Admin API: '+fmt$(auditEntry.cost)+' vs log '+fmt$(cost_usd)+'">⚠️</span>';
     }
   }
-  return '<span class="audit-none" title="Not yet audited (Google/OpenRouter/other)">—</span>';
+  // Non-Anthropic provider — show JSONL-only badge
+  return '<span class="audit-none" title="JSONL-only (no billing API available)">⚡</span>';
 }
 
 function getData(){

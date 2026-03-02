@@ -195,14 +195,15 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
     <table>
       <thead><tr><th>Model</th><th>Provider</th><th>Input</th><th>Output</th><th>Tier</th></tr></thead>
       <tbody>
-        <tr><td>claude-opus-4-6</td><td>Anthropic</td><td>$5.00</td><td>$25.00</td><td><span class="ct ct-h">HIGH</span></td></tr>
+        <tr><td>claude-opus-4-6</td><td>Anthropic</td><td>$15.00</td><td>$75.00</td><td><span class="ct ct-h">HIGH</span></td></tr>
         <tr><td>claude-sonnet-4-6</td><td>Anthropic</td><td>$3.00</td><td>$15.00</td><td><span class="ct ct-m">MID</span></td></tr>
-        <tr><td>claude-haiku-4-5</td><td>Anthropic</td><td>$1.00</td><td>$5.00</td><td><span class="ct ct-l">LOW</span></td></tr>
+        <tr><td>claude-haiku-4-5</td><td>Anthropic</td><td>$0.80</td><td>$4.00</td><td><span class="ct ct-l">LOW</span></td></tr>
         <tr><td>gemini-3.1-pro-preview</td><td>Google</td><td>$2.00</td><td>$12.00</td><td><span class="ct ct-m">MID</span></td></tr>
         <tr><td>gemini-2.5-pro</td><td>Google</td><td>$1.25</td><td>$10.00</td><td><span class="ct ct-m">MID</span></td></tr>
         <tr><td>gemini-2.5-flash</td><td>Google</td><td>$0.30</td><td>$2.50</td><td><span class="ct ct-l">LOW</span></td></tr>
         <tr><td>sonar-pro (web_search)</td><td>Perplexity</td><td colspan="2">~$0.005/call <span class="est-tag">EST</span></td><td><span class="ct ct-l">LOW</span></td></tr>
         <tr><td>llama-3.3-70b:free</td><td>OpenRouter</td><td colspan="2">$0.00 (free tier)</td><td><span class="ct ct-f">FREE</span></td></tr>
+        <tr><td>llama-3.3-70b (paid)</td><td>OpenRouter</td><td>$0.12</td><td>$0.30</td><td><span class="ct ct-l">LOW</span></td></tr>
         <tr><td>deepseek-chat</td><td>OpenRouter</td><td>$0.14</td><td>$0.28</td><td><span class="ct ct-l">LOW</span></td></tr>
         <tr><td>llama-3.3-70b</td><td>Groq</td><td colspan="2">$0.00 (free tier)</td><td><span class="ct ct-f">FREE</span></td></tr>
         <tr><td>qwen2.5 / llama3.2</td><td>Ollama (local)</td><td colspan="2">$0.00</td><td><span class="ct ct-f">FREE</span></td></tr>
@@ -212,9 +213,9 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
     <p>Costs for Anthropic and Google are calculated by OpenClaw's billing layer at response time and stored in session JSONL. This dashboard reads those pre-calculated values. Cache read tokens billed at ~10% of input rate. Google implicit caching (auto since May 2025) already reflected in amounts.</p>
     <h3>Audit Column</h3>
     <p>The <strong>Audit</strong> column in the daily table cross-references JSONL-derived costs against provider billing APIs:</p>
-    <p><span class="audit-ok">✓</span> = Anthropic Admin API confirmed (delta &lt;5%)</p>
-    <p><span class="audit-warn">⚠</span> = Mismatch detected between JSONL and billing API</p>
-    <p><span class="audit-none">—</span> = No billing API available (Google, OpenRouter, etc.)</p>
+    <p><span class="audit-ok">✅</span> = Anthropic Admin API confirmed (delta &lt;5%)</p>
+    <p><span class="audit-warn">⚠️</span> = Mismatch detected between JSONL and billing API</p>
+    <p><span class="audit-none">⚡</span> = JSONL-only (no billing API available — Google, OpenRouter, etc.)</p>
     <h3>Timezone</h3>
     <p>All dates and hours are displayed in <strong>Eastern Time</strong> (EST/EDT). The system auto-adjusts for daylight saving time using <code>America/Toronto</code>.</p>
   </div>
