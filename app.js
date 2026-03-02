@@ -205,20 +205,16 @@ function findAuditEntry(date, model){
 }
 
 // Audit badge helper
-function auditBadge(date, model, cost_usd){
-  // Check if Anthropic audit data covers this date+model
-  var auditEntry=findAuditEntry(date, model);
-  if(auditEntry){
-    var diff=Math.abs((auditEntry.cost||0)-cost_usd);
-    var pct=cost_usd>0?diff/cost_usd:0;
-    if(pct<0.05){
-      return '<span class="audit-ok" title="Anthropic Admin API confirmed · delta &lt;5%">✅</span>';
-    } else {
-      return '<span class="audit-warn" title="Anthropic Admin API: '+fmt$(auditEntry.cost)+' vs log '+fmt$(cost_usd)+'">⚠️</span>';
+// provider + estimated come from the data row (set by generate-report.py)
+function auditBadge(date, model, provider, estimated){
+  if(provider === 'anthropic'){
+    if(estimated){
+      return '<span class="audit-none" title="JSONL estimate — Anthropic Admin API not yet available for current hour">⏳</span>';
     }
+    return '<span class="audit-ok" title="Anthropic Admin API — authoritative billing cost">✅</span>';
   }
-  // Non-Anthropic provider — show JSONL-only badge
-  return '<span class="audit-none" title="JSONL-only (no billing API available)">⚡</span>';
+  // Non-Anthropic: JSONL is source of truth (Google rates verified accurate)
+  return '<span class="audit-none" title="JSONL (OpenClaw billing layer — rates verified accurate for this provider)">⚡</span>';
 }
 
 function getData(){
@@ -250,6 +246,7 @@ function getData(){
 }
 
 function renderRow(r){
+  var costCell = fmt$(r.cost_usd||0) + (r.estimated ? ' <span class="est-tag" title="Current hour estimate from JSONL (Anthropic Admin API not yet available for this period)">(est)</span>' : '');
   if(view==='daily'){
     return '<tr>'+
       '<td>'+r.date+'</td>'+
@@ -257,8 +254,8 @@ function renderRow(r){
       '<td>'+(r.model||'—')+'</td>'+
       '<td class="n">'+(r.call_count||0).toLocaleString()+'</td>'+
       '<td class="n">'+fmtT(r.total_tokens||0)+'</td>'+
-      '<td class="n">'+fmt$(r.cost_usd||0)+'</td>'+
-      '<td class="n">'+auditBadge(r.date,r.model,r.cost_usd||0)+'</td>'+
+      '<td class="n">'+costCell+'</td>'+
+      '<td class="n">'+auditBadge(r.date,r.model,r.provider,r.estimated)+'</td>'+
       '</tr>';
   } else {
     return '<tr>'+
@@ -268,7 +265,7 @@ function renderRow(r){
       '<td>'+(r.model||'—')+'</td>'+
       '<td class="n">'+(r.call_count||0).toLocaleString()+'</td>'+
       '<td class="n">'+fmtT(r.total_tokens||0)+'</td>'+
-      '<td class="n">'+fmt$(r.cost_usd||0)+'</td>'+
+      '<td class="n">'+costCell+'</td>'+
       '</tr>';
   }
 }
