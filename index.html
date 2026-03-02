@@ -94,6 +94,14 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
 <body>
 <h1>🔧 Steve's LLM Spend Dashboard <button class="info-btn" onclick="openM()">i</button></h1>
 <p class="sub-title">OpenClaw session logs · All times <span id="tz-label">ET</span> · Updated: <span id="ts"></span></p>
+<div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:.78em;color:#8b949e">
+  <span>Quick links:</span>
+  <a href="https://platform.claude.com/workspaces/default/cost" target="_blank" style="color:#f97316;text-decoration:none">Anthropic Cost ↗</a>
+  <a href="https://platform.claude.com/usage?period=week&date=2026-03-02" target="_blank" style="color:#f97316;text-decoration:none">Anthropic Usage ↗</a>
+  <a href="https://aistudio.google.com/u/1/spend" target="_blank" style="color:#3b82f6;text-decoration:none">Google Spend ↗</a>
+  <a href="https://aistudio.google.com/u/1/rate-limit?timeRange=last-1-day" target="_blank" style="color:#3b82f6;text-decoration:none">Google Rate Limits ↗</a>
+  <a href="https://console.cloud.google.com/billing/011B7B-A87B16-7E5656/reports;timeRange=LAST_30_DAYS;grouping=GROUP_BY_PROJECT_ANCESTRY?authuser=1&organizationId=597918355300" target="_blank" style="color:#3b82f6;text-decoration:none">GCP Billing ↗</a>
+</div>
 <div class="cards" id="cards"></div>
 <div class="section">
   <div class="sec-head">
@@ -209,6 +217,19 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
         <tr><td>qwen2.5 / llama3.2</td><td>Ollama (local)</td><td colspan="2">$0.00</td><td><span class="ct ct-f">FREE</span></td></tr>
       </tbody>
     </table>
+    <h3>Provider Consoles</h3>
+    <p style="margin-bottom:4px"><strong>Anthropic</strong></p>
+    <p>
+      <a href="https://platform.claude.com/settings/billing" target="_blank" style="color:#58a6ff">Billing Settings</a> ·
+      <a href="https://platform.claude.com/workspaces/default/cost" target="_blank" style="color:#58a6ff">Workspace Cost</a> ·
+      <a href="https://platform.claude.com/usage?period=week&date=2026-03-02" target="_blank" style="color:#58a6ff">Usage (Weekly)</a>
+    </p>
+    <p style="margin-bottom:4px;margin-top:12px"><strong>Google</strong></p>
+    <p>
+      <a href="https://aistudio.google.com/u/1/rate-limit?timeRange=last-1-day" target="_blank" style="color:#58a6ff">AI Studio Rate Limits</a> ·
+      <a href="https://aistudio.google.com/u/1/spend" target="_blank" style="color:#58a6ff">AI Studio Spend</a> ·
+      <a href="https://console.cloud.google.com/billing/011B7B-A87B16-7E5656/reports;timeRange=LAST_30_DAYS;grouping=GROUP_BY_PROJECT_ANCESTRY?authuser=1&organizationId=597918355300" target="_blank" style="color:#58a6ff">Cloud Billing Console</a>
+    </p>
     <h3>Cost Calculation</h3>
     <p>Costs for Anthropic and Google are calculated by OpenClaw's billing layer at response time and stored in session JSONL. This dashboard reads those pre-calculated values. Cache read tokens billed at ~10% of input rate. Google implicit caching (auto since May 2025) already reflected in amounts.</p>
     <h3>Audit Column</h3>
