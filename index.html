@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spend Dashboard</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px; }
+        h1 { color: #58a6ff; margin-bottom: 4px; font-size: 1.6em; }
+        .subtitle { color: #8b949e; margin-bottom: 24px; font-size: 0.9em; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; }
+        .card .label { color: #8b949e; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card .value { font-size: 1.8em; font-weight: 700; color: #f0f6fc; margin-top: 4px; }
+        .card .value.warn { color: #f85149; }
+        .card .detail { color: #8b949e; font-size: 0.8em; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; }
+        thead { background: #21262d; }
+        th { padding: 10px 14px; text-align: left; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #8b949e; border-bottom: 1px solid #30363d; }
+        td { padding: 10px 14px; border-bottom: 1px solid #30363d; font-size: 0.9em; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #1c2128; }
+        .provider-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: 600; }
+        .provider-anthropic { background: #f97316; color: #000; }
+        .provider-google { background: #3b82f6; color: #fff; }
+        .provider-perplexity { background: #8b5cf6; color: #fff; }
+        .provider-groq { background: #eab308; color: #000; }
+        .provider-ollama { background: #22c55e; color: #000; }
+        .provider-openclaw { background: #6b7280; color: #fff; }
+        .cost { font-variant-numeric: tabular-nums; }
+        .chart-container { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+        .chart-container h2 { color: #c9d1d9; font-size: 1em; margin-bottom: 12px; }
+        .bar-row { display: flex; align-items: center; margin-bottom: 6px; }
+        .bar-label { width: 100px; font-size: 0.8em; color: #8b949e; flex-shrink: 0; }
+        .bar-track { flex: 1; height: 20px; background: #21262d; border-radius: 4px; overflow: hidden; position: relative; }
+        .bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+        .bar-value { width: 80px; text-align: right; font-size: 0.8em; color: #c9d1d9; flex-shrink: 0; margin-left: 8px; }
+        .filters { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+        .filters select, .filters input { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 6px; padding: 6px 10px; font-size: 0.85em; }
+        h2 { color: #c9d1d9; font-size: 1.1em; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <h1>🔧 AI Spend Dashboard</h1>
+    <p class="subtitle">Last updated: <span id="updated"></span></p>
+
+    <div class="cards" id="summary-cards"></div>
+
+    <div class="chart-container">
+        <h2>Daily Spend by Provider</h2>
+        <div id="daily-chart"></div>
+    </div>
+
+    <h2>Detailed Breakdown</h2>
+    <div class="filters">
+        <select id="filter-provider"><option value="">All Providers</option></select>
+        <select id="filter-date"><option value="">All Dates</option></select>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Provider</th>
+                <th>Model</th>
+                <th style="text-align:right">Tokens</th>
+                <th style="text-align:right">Cost (USD)</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="usage_data.js"></script>
+    <script>
+        const providerColors = {
+            anthropic: '#f97316', google: '#3b82f6', perplexity: '#8b5cf6',
+            groq: '#eab308', ollama: '#22c55e', openclaw: '#6b7280'
+        };
+
+        // Summary cards
+        const totalCost = USAGE_DATA.reduce((s, r) => s + r.cost_usd, 0);
+        const totalTokens = USAGE_DATA.reduce((s, r) => s + r.total_tokens, 0);
+        const dates = [...new Set(USAGE_DATA.map(r => r.date))].sort();
+        const today = dates[0]; // Most recent
+        const todayCost = USAGE_DATA.filter(r => r.date === today).reduce((s, r) => s + r.cost_usd, 0);
+        const providers = [...new Set(USAGE_DATA.map(r => r.provider))];
+
+        document.getElementById('updated').textContent = new Date(GENERATED_AT).toLocaleString();
+
+        const cardsHtml = `
+            <div class="card"><div class="label">Today (${today})</div><div class="value ${todayCost > 50 ? 'warn' : ''}">$${todayCost.toFixed(2)}</div></div>
+            <div class="card"><div class="label">All-Time Total</div><div class="value">$${totalCost.toFixed(2)}</div><div class="detail">${dates.length} days tracked</div></div>
+            <div class="card"><div class="label">Total Tokens</div><div class="value">${(totalTokens/1e6).toFixed(1)}M</div></div>
+            <div class="card"><div class="label">Avg Daily</div><div class="value">$${(totalCost / dates.length).toFixed(2)}</div></div>
+        `;
+        document.getElementById('summary-cards').innerHTML = cardsHtml;
+
+        // Daily spend chart
+        const dailyByProvider = {};
+        USAGE_DATA.forEach(r => {
+            if (!dailyByProvider[r.date]) dailyByProvider[r.date] = {};
+            dailyByProvider[r.date][r.provider] = (dailyByProvider[r.date][r.provider] || 0) + r.cost_usd;
+        });
+        const maxDaily = Math.max(...dates.map(d => Object.values(dailyByProvider[d] || {}).reduce((s, v) => s + v, 0)));
+
+        let chartHtml = '';
+        dates.forEach(date => {
+            const dayTotal = Object.values(dailyByProvider[date] || {}).reduce((s, v) => s + v, 0);
+            let barHtml = '';
+            let offset = 0;
+            providers.forEach(p => {
+                const val = (dailyByProvider[date] || {})[p] || 0;
+                if (val > 0) {
+                    const w = (val / maxDaily * 100);
+                    barHtml += `<div class="bar-fill" style="position:absolute;left:${offset/maxDaily*100}%;width:${w}%;background:${providerColors[p] || '#666'};" title="${p}: $${val.toFixed(2)}"></div>`;
+                    offset += val;
+                }
+            });
+            chartHtml += `<div class="bar-row"><div class="bar-label">${date}</div><div class="bar-track">${barHtml}</div><div class="bar-value">$${dayTotal.toFixed(2)}</div></div>`;
+        });
+        document.getElementById('daily-chart').innerHTML = chartHtml;
+
+        // Filters
+        const provSelect = document.getElementById('filter-provider');
+        const dateSelect = document.getElementById('filter-date');
+        providers.sort().forEach(p => { const o = document.createElement('option'); o.value = p; o.textContent = p; provSelect.appendChild(o); });
+        dates.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; dateSelect.appendChild(o); });
+
+        function renderTable() {
+            const fp = provSelect.value;
+            const fd = dateSelect.value;
+            let filtered = USAGE_DATA;
+            if (fp) filtered = filtered.filter(r => r.provider === fp);
+            if (fd) filtered = filtered.filter(r => r.date === fd);
+
+            document.getElementById('table-body').innerHTML = filtered.map(r => `
+                <tr>
+                    <td>${r.date}</td>
+                    <td><span class="provider-badge provider-${r.provider}">${r.provider}</span></td>
+                    <td>${r.model}</td>
+                    <td style="text-align:right" class="cost">${r.total_tokens.toLocaleString()}</td>
+                    <td style="text-align:right" class="cost">$${r.cost_usd.toFixed(4)}</td>
+                </tr>
+            `).join('');
+        }
+
+        provSelect.addEventListener('change', renderTable);
+        dateSelect.addEventListener('change', renderTable);
+        renderTable();
+    </script>
+</body>
+</html>
