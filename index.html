@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Spend Dashboard</title>
+<title>Steve's LLM Spend Dashboard</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;padding:24px;line-height:1.5}
@@ -18,7 +18,7 @@ h1{color:#58a6ff;margin-bottom:2px;font-size:1.5em}
 .section{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;margin-bottom:20px}
 .sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
 .sec-head h2{font-size:.95em;color:#c9d1d9}
-.tog{display:flex;gap:0}
+.tog{display:flex}
 .tog button{background:#21262d;border:1px solid #30363d;color:#8b949e;padding:4px 12px;font-size:.8em;cursor:pointer}
 .tog button:first-child{border-radius:6px 0 0 6px}
 .tog button:last-child{border-radius:0 6px 6px 0;border-left:none}
@@ -33,25 +33,36 @@ h1{color:#58a6ff;margin-bottom:2px;font-size:1.5em}
 .legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
 .legend-item{display:flex;align-items:center;gap:5px;font-size:.78em;color:#8b949e}
 .legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
-.filters{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;align-items:flex-end}
-.filters label{font-size:.75em;color:#8b949e;display:block;margin-bottom:2px}
-.filters select,.filters input[type=date]{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 8px;font-size:.82em}
+.filters{display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap;align-items:flex-end}
+.filter-group{display:flex;flex-direction:column;gap:3px}
+.filter-group label{font-size:.75em;color:#8b949e;letter-spacing:.3px}
+.filter-group select{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:6px 8px;font-size:.82em;min-width:140px}
+.date-wrap{position:relative;display:flex;align-items:center}
+.date-wrap .cal-icon{position:absolute;right:8px;pointer-events:none;color:#58a6ff;font-size:13px}
+.date-wrap input[type=date]{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:6px 32px 6px 8px;font-size:.82em;width:152px;color-scheme:dark}
+.date-wrap input[type=date]::-webkit-calendar-picker-indicator{opacity:0;position:absolute;right:0;width:36px;height:100%;cursor:pointer}
+.clr-btn{background:#21262d;border:1px solid #30363d;color:#c9d1d9;border-radius:6px;padding:6px 14px;font-size:.82em;cursor:pointer}
+.clr-btn:hover{border-color:#58a6ff;color:#58a6ff}
 .tbl-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;min-width:600px}
+table{width:100%;border-collapse:collapse;min-width:580px}
 thead{background:#21262d}
 th{padding:9px 12px;text-align:left;font-size:.75em;text-transform:uppercase;letter-spacing:.5px;color:#8b949e;border-bottom:1px solid #30363d;white-space:nowrap;cursor:pointer;user-select:none}
 th:hover{color:#c9d1d9}
+th.sa::after{content:' \2191'}
+th.sd::after{content:' \2193'}
 td{padding:8px 12px;border-bottom:1px solid #21262d;font-size:.85em}
 tr:hover td{background:#1c2128}
 .pb{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.72em;font-weight:600}
 .pb-anthropic{background:#f97316;color:#000}
 .pb-google{background:#3b82f6;color:#fff}
+.pb-google2{background:#4285f4;color:#fff}
 .pb-perplexity{background:#8b5cf6;color:#fff}
 .pb-groq{background:#eab308;color:#000}
 .pb-ollama{background:#22c55e;color:#000}
 .pb-openclaw{background:#6b7280;color:#fff}
 .pb-openrouter{background:#e879f9;color:#000}
 td.n{text-align:right;font-variant-numeric:tabular-nums}
+.empty-state{text-align:center;padding:32px;color:#484f58;font-size:.9em}
 .pag{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:.82em;color:#8b949e}
 .pbtn{background:#21262d;border:1px solid #30363d;color:#c9d1d9;border-radius:4px;padding:3px 10px;cursor:pointer;font-size:.82em}
 .pbtn:disabled{opacity:.4;cursor:default}
@@ -61,29 +72,25 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
 .overlay.open{display:flex}
 .modal{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:24px;max-width:720px;width:92%;max-height:82vh;overflow-y:auto;position:relative}
 .modal h2{color:#58a6ff;font-size:1.1em;margin-bottom:16px}
-.modal .x{position:absolute;top:14px;right:16px;background:none;border:none;color:#8b949e;font-size:1.3em;cursor:pointer}
+.modal .x{position:absolute;top:14px;right:16px;background:none;border:none;color:#8b949e;font-size:1.3em;cursor:pointer;line-height:1}
 .modal .x:hover{color:#f0f6fc}
 .modal h3{color:#c9d1d9;font-size:.9em;margin:16px 0 8px;border-bottom:1px solid #30363d;padding-bottom:6px}
 .modal p{font-size:.85em;color:#8b949e;margin-bottom:8px}
 .modal table{width:100%;font-size:.85em}
-.modal th{font-size:.75em;color:#8b949e}
-.modal td{color:#c9d1d9}
+.modal th{font-size:.75em;color:#8b949e;text-transform:uppercase}
+.modal td{color:#c9d1d9;border-bottom:1px solid #21262d}
 .est-tag{display:inline-block;background:#1f6feb22;border:1px solid #1f6feb44;color:#58a6ff;border-radius:4px;padding:1px 6px;font-size:.72em;margin-left:4px}
 .ct{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.72em;font-weight:600}
 .ct-h{background:#f8514922;color:#f85149}
 .ct-m{background:#e3b34122;color:#e3b341}
 .ct-l{background:#3fb95022;color:#3fb950}
 .ct-f{background:#8b5cf622;color:#8b5cf6}
-.clr-btn{background:#21262d;border:1px solid #30363d;color:#c9d1d9;border-radius:6px;padding:4px 12px;font-size:.8em;cursor:pointer}
 </style>
 </head>
 <body>
-
-<h1>🔧 AI Spend Dashboard <button class="info-btn" onclick="openM()">ℹ</button></h1>
-<p class="sub-title">Data from OpenClaw session logs · Updated: <span id="ts"></span></p>
-
+<h1>🔧 Steve's LLM Spend Dashboard <button class="info-btn" onclick="openM()">i</button></h1>
+<p class="sub-title">OpenClaw session logs · Updated: <span id="ts"></span></p>
 <div class="cards" id="cards"></div>
-
 <div class="section">
   <div class="sec-head">
     <h2>Daily Spend by Provider</h2>
@@ -95,7 +102,6 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
   <div class="legend" id="legend"></div>
   <div id="chart"></div>
 </div>
-
 <div class="section">
   <div class="sec-head">
     <h2>Detailed Breakdown</h2>
@@ -105,38 +111,54 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
     </div>
   </div>
   <div class="filters">
-    <div><label>Provider</label><select id="fp"><option value="">All</option></select></div>
-    <div><label>Model</label><select id="fm"><option value="">All</option></select></div>
-    <div><label>From</label><input type="date" id="fd1"></div>
-    <div><label>To</label><input type="date" id="fd2"></div>
-    <div><button class="clr-btn" onclick="clrF()">Clear</button></div>
+    <div class="filter-group">
+      <label>Provider</label>
+      <select id="fp" onchange="onProviderChange()"><option value="">All Providers</option></select>
+    </div>
+    <div class="filter-group">
+      <label>Model</label>
+      <select id="fm" onchange="onFilterChange()"><option value="">All Models</option></select>
+    </div>
+    <div class="filter-group">
+      <label>From</label>
+      <div class="date-wrap">
+        <input type="date" id="fd1" onchange="onFilterChange()">
+        <span class="cal-icon">&#128197;</span>
+      </div>
+    </div>
+    <div class="filter-group">
+      <label>To</label>
+      <div class="date-wrap">
+        <input type="date" id="fd2" onchange="onFilterChange()">
+        <span class="cal-icon">&#128197;</span>
+      </div>
+    </div>
+    <div class="filter-group" style="justify-content:flex-end">
+      <button class="clr-btn" onclick="clrF()">Clear</button>
+    </div>
   </div>
   <div class="tbl-wrap">
     <table><thead id="thead"></thead><tbody id="tbody"></tbody></table>
   </div>
   <div class="pag">
-    <button class="pbtn" id="bp" onclick="pg(-1)">← Prev</button>
+    <button class="pbtn" id="bp" onclick="pg(-1)">&#8592; Prev</button>
     <span id="pi"></span>
-    <button class="pbtn" id="bn" onclick="pg(1)">Next →</button>
+    <button class="pbtn" id="bn" onclick="pg(1)">Next &#8594;</button>
     <span style="margin-left:auto">Per page:
-      <select id="pps" style="background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:4px;padding:2px 4px">
-        <option>25</option><option>50</option><option>100</option>
+      <select id="pps" onchange="pSize=+this.value;cPage=0;render()" style="background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:4px;padding:2px 4px">
+        <option value="25">25</option><option value="50">50</option><option value="100">100</option>
       </select>
     </span>
   </div>
 </div>
-
-<!-- Info Modal -->
 <div class="overlay" id="ov">
   <div class="modal">
-    <button class="x" onclick="closeM()">×</button>
-    <h2>ℹ Data Sources & Pricing</h2>
-
-    <h3>How Token Data is Collected</h3>
-    <p>Every API call from Anthropic and Google logs a <code>usage</code> object in session JSONL files at <code>~/.openclaw/agents/main/sessions/*.jsonl</code>. Each assistant message includes <code>input</code>, <code>output</code>, <code>cacheRead</code>, and <code>cacheWrite</code> token counts, plus a pre-calculated <code>cost</code> object from OpenClaw's billing layer. These are ingested into a local SQLite database by <code>ingest-usage.py</code>.</p>
-    <p><strong>Perplexity (web_search):</strong> Tool calls don't emit token data. Cost is <em>estimated</em> at $0.005/call based on Sonar Pro pricing (~1K input + 500 output tokens typical). <span class="est-tag">ESTIMATED</span></p>
-    <p><strong>Groq, Ollama, OpenClaw internal:</strong> Calls logged but cost = $0 (free tiers or internal routing). Token counts from Groq/Ollama are often zero in the log.</p>
-
+    <button class="x" onclick="closeM()">&#215;</button>
+    <h2>Data Sources &amp; Pricing</h2>
+    <h3>How Token Data Is Collected</h3>
+    <p>Every API call from Anthropic and Google logs a <code>usage</code> object in session JSONL files at <code>~/.openclaw/agents/main/sessions/*.jsonl</code>. Each assistant message includes input, output, cacheRead, and cacheWrite token counts, plus a pre-calculated cost object from OpenClaw's billing layer. Ingested via <code>ingest-usage.py</code>, exported via <code>generate-report.py</code>.</p>
+    <p><strong>Perplexity (web_search):</strong> Tool calls don't emit token data. Cost estimated at $0.005/call. <span class="est-tag">ESTIMATED</span></p>
+    <p><strong>Groq, Ollama, OpenClaw internal, OpenRouter free:</strong> Logged but cost = $0.</p>
     <h3>Model Pricing (per 1M tokens)</h3>
     <table>
       <thead><tr><th>Model</th><th>Provider</th><th>Input</th><th>Output</th><th>Tier</th></tr></thead>
@@ -147,136 +169,16 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
         <tr><td>gemini-3.1-pro-preview</td><td>Google</td><td>$2.00</td><td>$12.00</td><td><span class="ct ct-m">MID</span></td></tr>
         <tr><td>gemini-2.5-pro</td><td>Google</td><td>$1.25</td><td>$10.00</td><td><span class="ct ct-m">MID</span></td></tr>
         <tr><td>gemini-2.5-flash</td><td>Google</td><td>$0.30</td><td>$2.50</td><td><span class="ct ct-l">LOW</span></td></tr>
-        <tr><td>gemini-3-flash-preview</td><td>Google</td><td>$0.50</td><td>$3.00</td><td><span class="ct ct-l">LOW</span></td></tr>
         <tr><td>sonar-pro (web_search)</td><td>Perplexity</td><td colspan="2">~$0.005/call <span class="est-tag">EST</span></td><td><span class="ct ct-l">LOW</span></td></tr>
-        <tr><td>llama-3.3-70b-versatile</td><td>Groq</td><td colspan="2">~$0.59/$0.79 (free tier)</td><td><span class="ct ct-f">FREE</span></td></tr>
-        <tr><td>llama-3.3-70b:free</td><td>OpenRouter</td><td colspan="2">$0.00</td><td><span class="ct ct-f">FREE</span></td></tr>
+        <tr><td>llama-3.3-70b</td><td>Groq / OpenRouter</td><td colspan="2">$0.00 (free tiers)</td><td><span class="ct ct-f">FREE</span></td></tr>
         <tr><td>qwen2.5 / llama3.2</td><td>Ollama (local)</td><td colspan="2">$0.00</td><td><span class="ct ct-f">FREE</span></td></tr>
       </tbody>
     </table>
-
     <h3>Cost Calculation</h3>
-    <p>Costs for Anthropic and Google are calculated by OpenClaw's billing layer at response time using actual token counts × published rates, then stored in the session JSONL. This dashboard reads those pre-calculated values directly — no re-calculation happens here.</p>
-    <p>Cache read tokens (Anthropic prompt caching) are billed at ~10% of input rate and tracked separately. Google implicit caching (auto since May 2025) reduces billed tokens on repeated prefixes — reflected in actual billed amounts.</p>
+    <p>Costs for Anthropic and Google are calculated by OpenClaw's billing layer at response time and stored in session JSONL. This dashboard reads those pre-calculated values. Cache read tokens billed at ~10% of input rate. Google implicit caching (auto since May 2025) already reflected in amounts.</p>
   </div>
 </div>
-
 <script src="usage_data.js"></script>
-<script>
-const PC={anthropic:'#f97316',google:'#3b82f6',perplexity:'#8b5cf6',groq:'#eab308',ollama:'#22c55e',openclaw:'#6b7280',openrouter:'#e879f9'};
-
-function todayEST(){const n=new Date();const e=new Date(n.getTime()-5*3600000);return e.toISOString().slice(0,10)}
-function addD(s,n){const d=new Date(s+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)}
-function dRange(a,b){const r=[];let c=a;while(c<=b){r.push(c);c=addD(c,1)}return r}
-function fmt$(n){return n===0?'$0.00':n<.01?'$'+n.toFixed(4):'$'+n.toFixed(2)}
-function fmtT(n){return n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1)+'K':n.toLocaleString()}
-
-const TODAY=todayEST();
-const allDates=[...new Set(USAGE_DATA.map(r=>r.date))].sort().reverse();
-const allProv=[...new Set(USAGE_DATA.map(r=>r.provider))].sort();
-const allMod=[...new Set(USAGE_DATA.map(r=>r.model))].sort();
-
-// Daily map: date -> {provider -> cost}
-const DM={};
-USAGE_DATA.forEach(r=>{if(!DM[r.date])DM[r.date]={};DM[r.date][r.provider]=(DM[r.date][r.provider]||0)+r.cost_usd});
-
-let chartDays=7, view='daily', sCol=null, sDir=1, cPage=0, pSize=25;
-
-// ─── CARDS ──────────────────────────────────────────────────────
-function buildCards(){
-  const td=USAGE_DATA.filter(r=>r.date===TODAY);
-  const tCost=td.reduce((s,r)=>s+r.cost_usd,0);
-  const tTok=td.reduce((s,r)=>s+r.total_tokens,0);
-  const p7=dRange(addD(TODAY,-7),addD(TODAY,-1));
-  const a7=p7.reduce((s,d)=>s+Object.values(DM[d]||{}).reduce((a,v)=>a+v,0),0)/7;
-  const p30=dRange(addD(TODAY,-30),addD(TODAY,-1));
-  const a30=p30.reduce((s,d)=>s+Object.values(DM[d]||{}).reduce((a,v)=>a+v,0),0)/30;
-  const byM={};td.forEach(r=>{byM[r.model]=(byM[r.model]||0)+r.cost_usd});
-  const top=Object.entries(byM).sort((a,b)=>b[1]-a[1])[0];
-  document.getElementById('ts').textContent=new Date(GENERATED_AT).toLocaleString();
-  document.getElementById('cards').innerHTML=`
-    <div class="card"><div class="lbl">Today (${TODAY})</div><div class="val ${tCost>80?'warn':''}">${fmt$(tCost)}</div><div class="det">${fmtT(tTok)} tokens</div></div>
-    <div class="card"><div class="lbl">7-Day Avg <span style="color:#484f58;font-size:.9em">(excl today)</span></div><div class="val">${fmt$(a7)}</div><div class="det">per day</div></div>
-    <div class="card"><div class="lbl">30-Day Avg <span style="color:#484f58;font-size:.9em">(excl today)</span></div><div class="val">${fmt$(a30)}</div><div class="det">per day (incl zero days)</div></div>
-    <div class="card"><div class="lbl">Top Model Today</div><div class="val" style="font-size:1em;word-break:break-all">${top?top[0]:'—'}</div><div class="det">${top?fmt$(top[1])+' spent':'no data'}</div></div>`;
-}
-
-// ─── CHART ──────────────────────────────────────────────────────
-function setRange(d){
-  chartDays=d;
-  document.querySelectorAll('#chart-tog button').forEach((b,i)=>b.classList.toggle('on',i===(d===7?0:1)));
-  buildChart();
-}
-
-function buildChart(){
-  const dates=dRange(addD(TODAY,-(chartDays-1)),TODAY).reverse();
-  const tots=dates.map(d=>Object.values(DM[d]||{}).reduce((s,v)=>s+v,0));
-  const mx=Math.max(...tots.filter(v=>v>0),1);
-  document.getElementById('legend').innerHTML=allProv.map(p=>`<div class="legend-item"><div class="legend-dot" style="background:${PC[p]||'#666'}"></div>${p}</div>`).join('');
-  let h='';
-  dates.forEach((dt,i)=>{
-    const tot=tots[i], isT=dt===TODAY, z=tot===0;
-    let bars='';
-    if(z){bars='<div style="height:100%;width:2px;background:#30363d"></div>'}
-    else{let off=0;allProv.forEach(p=>{const v=(DM[dt]||{})[p]||0;if(v>0){bars+=`<div class="bar-fill" style="left:${(off/mx*100).toFixed(2)}%;width:${(v/mx*100).toFixed(2)}%;background:${PC[p]||'#666'}" title="${p}: ${fmt$(v)}"></div>`;off+=v}})}
-    h+=`<div class="bar-row"><div class="bar-dt ${isT?'today':''}">${dt}${isT?' ★':''}</div><div class="bar-track">${bars}</div><div class="bar-val ${z?'zero':''}">${z?'—':fmt$(tot)}</div></div>`;
-  });
-  document.getElementById('chart').innerHTML=h;
-}
-
-// ─── TABLE ──────────────────────────────────────────────────────
-function setView(v){
-  view=v;cPage=0;
-  document.querySelectorAll('#view-tog button').forEach((b,i)=>b.classList.toggle('on',i===(v==='daily'?0:1)));
-  const hd=v==='daily'
-    ?'<tr><th onclick="srt(\'date\')">Date</th><th onclick="srt(\'provider\')">Provider</th><th onclick="srt(\'model\')">Model</th><th onclick="srt(\'call_count\')" style="text-align:right">Calls</th><th onclick="srt(\'total_tokens\')" style="text-align:right">Tokens</th><th onclick="srt(\'cost_usd\')" style="text-align:right">Cost</th></tr>'
-    :'<tr><th onclick="srt(\'date\')">Date</th><th onclick="srt(\'hour\')" style="text-align:right">Hour (UTC)</th><th onclick="srt(\'provider\')">Provider</th><th onclick="srt(\'model\')">Model</th><th onclick="srt(\'call_count\')" style="text-align:right">Calls</th><th onclick="srt(\'total_tokens\')" style="text-align:right">Tokens</th><th onclick="srt(\'cost_usd\')" style="text-align:right">Cost</th></tr>';
-  document.getElementById('thead').innerHTML=hd;
-  render();
-}
-
-function getData(){
-  let d=view==='daily'?USAGE_DATA:HOURLY_DATA;
-  const fp=document.getElementById('fp').value;
-  const fm=document.getElementById('fm').value;
-  const d1=document.getElementById('fd1').value;
-  const d2=document.getElementById('fd2').value;
-  if(fp)d=d.filter(r=>r.provider===fp);
-  if(fm)d=d.filter(r=>r.model===fm);
-  if(d1)d=d.filter(r=>r.date>=d1);
-  if(d2)d=d.filter(r=>r.date<=d2);
-  if(sCol)d=[...d].sort((a,b)=>{const av=a[sCol],bv=b[sCol];return(typeof av==='string'?av.localeCompare(bv):(av-bv))*sDir});
-  return d;
-}
-
-function render(){
-  const d=getData(),total=d.length,st=cPage*pSize,pg=d.slice(st,st+pSize);
-  document.getElementById('pi').textContent=`${st+1}–${Math.min(st+pSize,total)} of ${total}`;
-  document.getElementById('bp').disabled=cPage===0;
-  document.getElementById('bn').disabled=st+pSize>=total;
-  if(view==='daily'){
-    document.getElementById('tbody').innerHTML=pg.map(r=>`<tr><td>${r.date}</td><td><span class="pb pb-${r.provider}">${r.provider}</span></td><td>${r.model}</td><td class="n">${r.call_count.toLocaleString()}</td><td class="n">${r.total_tokens.toLocaleString()}</td><td class="n">${fmt$(r.cost_usd)}</td></tr>`).join('');
-  } else {
-    document.getElementById('tbody').innerHTML=pg.map(r=>`<tr><td>${r.date}</td><td class="n">${String(r.hour).padStart(2,'0')}:00</td><td><span class="pb pb-${r.provider}">${r.provider}</span></td><td>${r.model}</td><td class="n">${r.call_count.toLocaleString()}</td><td class="n">${r.total_tokens.toLocaleString()}</td><td class="n">${fmt$(r.cost_usd)}</td></tr>`).join('');
-  }
-}
-
-function pg(d){cPage+=d;render()}
-function srt(c){if(sCol===c)sDir*=-1;else{sCol=c;sDir=-1}cPage=0;render()}
-function clrF(){document.getElementById('fp').value='';document.getElementById('fm').value='';document.getElementById('fd1').value='';document.getElementById('fd2').value='';render()}
-
-// ─── MODAL ──────────────────────────────────────────────────────
-function openM(){document.getElementById('ov').classList.add('open')}
-function closeM(){document.getElementById('ov').classList.remove('open')}
-document.getElementById('ov').addEventListener('click',e=>{if(e.target.id==='ov')closeM()});
-
-// ─── INIT ───────────────────────────────────────────────────────
-const fpS=document.getElementById('fp'),fmS=document.getElementById('fm');
-allProv.forEach(p=>fpS.add(new Option(p,p)));
-allMod.forEach(m=>fmS.add(new Option(m,m)));
-[fpS,fmS,document.getElementById('fd1'),document.getElementById('fd2')].forEach(el=>el.addEventListener('change',()=>{cPage=0;render()}));
-document.getElementById('pps').addEventListener('change',function(){pSize=+this.value;cPage=0;render()});
-buildCards();buildChart();setView('daily');
-</script>
+<script src="app.js"></script>
 </body>
 </html>
