@@ -1,19 +1,34 @@
-const GENERATED_AT = "2026-03-03T05:30:16.633060+00:00";
+const GENERATED_AT = "2026-03-03T06:30:39.508225+00:00";
 const TZ_LABEL = "UTC-5 (EST)";
 const USAGE_DATA = [
   {
     "date": "2026-03-03",
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "input_tokens": 179591,
-    "output_tokens": 1003,
-    "cache_read_tokens": 62799,
-    "total_tokens": 180594,
-    "cost_input": 0.053877299999999996,
-    "cost_output": 0.0025075000000000006,
-    "cost_cache_read": 0.0009419849999999999,
-    "cost_usd": 0.057326785000000005,
-    "call_count": 11
+    "input_tokens": 453190,
+    "output_tokens": 2324,
+    "cache_read_tokens": 143547,
+    "total_tokens": 455514,
+    "cost_input": 0.13595700000000002,
+    "cost_output": 0.005809999999999999,
+    "cost_cache_read": 0.0021532049999999996,
+    "cost_usd": 0.143920205,
+    "call_count": 27
+  },
+  {
+    "date": "2026-03-03",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "input_tokens": 11,
+    "output_tokens": 538,
+    "cache_read_tokens": 175221,
+    "total_tokens": 246603,
+    "cost_input": 0,
+    "cost_output": 0,
+    "cost_cache_read": 0,
+    "cost_usd": 1.631465,
+    "call_count": 0,
+    "estimated": false
   },
   {
     "date": "2026-03-02",
@@ -1204,12 +1219,32 @@ const USAGE_DATA = [
 const HOURLY_DATA = [
   {
     "date": "2026-03-03",
+    "hour": 1,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 102696,
+    "cost_usd": 0.0328788,
+    "call_count": 6,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-03",
     "hour": 0,
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "total_tokens": 180594,
-    "cost_usd": 0.057326785000000005,
-    "call_count": 11,
+    "total_tokens": 352818,
+    "cost_usd": 0.11104140500000001,
+    "call_count": 21,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-03",
+    "hour": 0,
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "total_tokens": 246603,
+    "cost_usd": 1.631465,
+    "call_count": 0,
     "estimated": false
   },
   {
