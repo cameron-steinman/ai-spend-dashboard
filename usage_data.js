@@ -1,32 +1,32 @@
-const GENERATED_AT = "2026-03-03T10:30:14.303997+00:00";
+const GENERATED_AT = "2026-03-03T11:30:14.436957+00:00";
 const TZ_LABEL = "UTC-5 (EST)";
 const USAGE_DATA = [
   {
     "date": "2026-03-03",
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "input_tokens": 1944956,
-    "output_tokens": 9457,
-    "cache_read_tokens": 842529,
-    "total_tokens": 1954413,
-    "cost_input": 0.5834868000000001,
-    "cost_output": 0.023642499999999993,
-    "cost_cache_read": 0.012637935,
-    "cost_usd": 0.6197672350000001,
-    "call_count": 114
+    "input_tokens": 2226131,
+    "output_tokens": 11275,
+    "cache_read_tokens": 920252,
+    "total_tokens": 2237406,
+    "cost_input": 0.6678392999999999,
+    "cost_output": 0.02818749999999998,
+    "cost_cache_read": 0.013803779999999998,
+    "cost_usd": 0.7098305799999998,
+    "call_count": 131
   },
   {
     "date": "2026-03-03",
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "input_tokens": 53,
-    "output_tokens": 2656,
-    "cache_read_tokens": 583436,
-    "total_tokens": 913108,
+    "input_tokens": 67,
+    "output_tokens": 3689,
+    "cache_read_tokens": 726939,
+    "total_tokens": 1108359,
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 7.205705,
+    "cost_usd": 8.449288,
     "call_count": 14,
     "estimated": false
   },
@@ -1219,12 +1219,32 @@ const USAGE_DATA = [
 const HOURLY_DATA = [
   {
     "date": "2026-03-03",
+    "hour": 6,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 198271,
+    "cost_usd": 0.06270747,
+    "call_count": 12,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-03",
     "hour": 5,
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "total_tokens": 102751,
-    "cost_usd": 0.03254707,
-    "call_count": 6,
+    "total_tokens": 187473,
+    "cost_usd": 0.05990294499999999,
+    "call_count": 11,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-03",
+    "hour": 5,
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "total_tokens": 195251,
+    "cost_usd": 1.243583,
+    "call_count": 0,
     "estimated": false
   },
   {
