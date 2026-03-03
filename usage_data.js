@@ -1,4 +1,4 @@
-const GENERATED_AT = "2026-03-03T16:30:07.152999+00:00";
+const GENERATED_AT = "2026-03-03T18:37:40.138513+00:00";
 const TZ_LABEL = "UTC-5 (EST)";
 const USAGE_DATA = [
   {
@@ -33,15 +33,15 @@ const USAGE_DATA = [
     "date": "2026-03-03",
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "input_tokens": 3682576,
-    "output_tokens": 26667,
-    "cache_read_tokens": 1412878,
-    "total_tokens": 3709243,
-    "cost_input": 1.1047727999999999,
-    "cost_output": 0.06666750000000002,
-    "cost_cache_read": 0.02119317,
-    "cost_usd": 1.192633470000001,
-    "call_count": 209
+    "input_tokens": 4131332,
+    "output_tokens": 29556,
+    "cache_read_tokens": 1586347,
+    "total_tokens": 4160888,
+    "cost_input": 1.239399599999999,
+    "cost_output": 0.07388999999999984,
+    "cost_cache_read": 0.023795205000000003,
+    "cost_usd": 1.3370848050000006,
+    "call_count": 237
   },
   {
     "date": "2026-03-03",
@@ -1247,12 +1247,32 @@ const USAGE_DATA = [
 const HOURLY_DATA = [
   {
     "date": "2026-03-03",
+    "hour": 13,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 102877,
+    "cost_usd": 0.0326297,
+    "call_count": 6,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-03",
+    "hour": 12,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 281399,
+    "cost_usd": 0.090366315,
+    "call_count": 18,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-03",
     "hour": 11,
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "total_tokens": 102629,
-    "cost_usd": 0.0322473,
-    "call_count": 6,
+    "total_tokens": 169998,
+    "cost_usd": 0.05370262,
+    "call_count": 10,
     "estimated": false
   },
   {
