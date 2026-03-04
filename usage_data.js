@@ -1,4 +1,4 @@
-const GENERATED_AT = "2026-03-04T11:31:25.327780+00:00";
+const GENERATED_AT = "2026-03-04T12:30:14.562370+00:00";
 const TZ_LABEL = "UTC-5 (EST)";
 const USAGE_DATA = [
   {
@@ -13,7 +13,7 @@ const USAGE_DATA = [
     "cost_output": 0,
     "cost_cache_read": 0,
     "cost_usd": 0,
-    "call_count": 2
+    "call_count": 3
   },
   {
     "date": "2026-03-04",
@@ -33,15 +33,15 @@ const USAGE_DATA = [
     "date": "2026-03-04",
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "input_tokens": 3357172,
-    "output_tokens": 15135,
-    "cache_read_tokens": 2072941,
-    "total_tokens": 3372307,
-    "cost_input": 1.0071515999999998,
-    "cost_output": 0.03783750000000011,
-    "cost_cache_read": 0.031094115,
-    "cost_usd": 1.0760832149999997,
-    "call_count": 194
+    "input_tokens": 3575213,
+    "output_tokens": 16726,
+    "cache_read_tokens": 2126893,
+    "total_tokens": 3591939,
+    "cost_input": 1.0725638999999991,
+    "cost_output": 0.04181500000000015,
+    "cost_cache_read": 0.031903395,
+    "cost_usd": 1.1462822949999996,
+    "call_count": 206
   },
   {
     "date": "2026-03-04",
@@ -61,30 +61,30 @@ const USAGE_DATA = [
     "date": "2026-03-04",
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
-    "input_tokens": 103,
-    "output_tokens": 25803,
-    "cache_read_tokens": 5169023,
+    "input_tokens": 142,
+    "output_tokens": 32036,
+    "cache_read_tokens": 6273150,
     "total_tokens": 6913482,
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
     "cost_usd": 4.643489,
     "call_count": 126,
-    "estimated": true
+    "estimated": false
   },
   {
     "date": "2026-03-04",
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "input_tokens": 102,
-    "output_tokens": 10074,
-    "cache_read_tokens": 3115985,
-    "total_tokens": 3935713,
+    "input_tokens": 119,
+    "output_tokens": 11499,
+    "cache_read_tokens": 3291702,
+    "total_tokens": 5914009,
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 19.428276,
-    "call_count": 20,
+    "cost_usd": 22.63853,
+    "call_count": 73,
     "estimated": true
   },
   {
@@ -1376,27 +1376,27 @@ const USAGE_DATA = [
 const HOURLY_DATA = [
   {
     "date": "2026-03-04",
-    "hour": 6,
+    "hour": 7,
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "total_tokens": 149455,
-    "cost_usd": 0.048049255,
-    "call_count": 9,
+    "total_tokens": 130566,
+    "cost_usd": 0.04164164,
+    "call_count": 7,
     "estimated": false
   },
   {
     "date": "2026-03-04",
-    "hour": 6,
+    "hour": 7,
     "provider": "anthropic",
-    "model": "claude-sonnet-4-6",
-    "total_tokens": 1197765,
-    "cost_usd": 0.752473,
-    "call_count": 35,
+    "model": "claude-opus-4-6",
+    "total_tokens": 1821371,
+    "cost_usd": 2.037054,
+    "call_count": 50,
     "estimated": true
   },
   {
     "date": "2026-03-04",
-    "hour": 6,
+    "hour": 7,
     "provider": "openclaw",
     "model": "delivery-mirror",
     "total_tokens": 0,
@@ -1407,12 +1407,42 @@ const HOURLY_DATA = [
   {
     "date": "2026-03-04",
     "hour": 6,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 238521,
+    "cost_usd": 0.07660669499999999,
+    "call_count": 14,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-04",
+    "hour": 6,
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "total_tokens": 73475,
-    "cost_usd": 0.195773,
-    "call_count": 3,
-    "estimated": true
+    "total_tokens": 230400,
+    "cost_usd": 1.368974,
+    "call_count": 6,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-04",
+    "hour": 6,
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "total_tokens": 1197765,
+    "cost_usd": 0.752473,
+    "call_count": 35,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-04",
+    "hour": 6,
+    "provider": "openclaw",
+    "model": "delivery-mirror",
+    "total_tokens": 0,
+    "cost_usd": 0,
+    "call_count": 1,
+    "estimated": false
   },
   {
     "date": "2026-03-04",
