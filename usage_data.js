@@ -1,4 +1,4 @@
-const GENERATED_AT = "2026-03-04T17:30:13.810741+00:00";
+const GENERATED_AT = "2026-03-04T18:30:13.855284+00:00";
 const TZ_LABEL = "UTC-5 (EST)";
 const USAGE_DATA = [
   {
@@ -19,15 +19,15 @@ const USAGE_DATA = [
     "date": "2026-03-04",
     "provider": "perplexity",
     "model": "sonar-pro",
-    "input_tokens": 140000,
-    "output_tokens": 70000,
+    "input_tokens": 151000,
+    "output_tokens": 75500,
     "cache_read_tokens": 0,
-    "total_tokens": 210000,
-    "cost_input": 0.4200000000000003,
-    "cost_output": 0.2800000000000002,
+    "total_tokens": 226500,
+    "cost_input": 0.45300000000000035,
+    "cost_output": 0.3020000000000002,
     "cost_cache_read": 0,
-    "cost_usd": 0.7000000000000005,
-    "call_count": 140
+    "cost_usd": 0.7550000000000006,
+    "call_count": 151
   },
   {
     "date": "2026-03-04",
@@ -47,15 +47,15 @@ const USAGE_DATA = [
     "date": "2026-03-04",
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "input_tokens": 9578522,
-    "output_tokens": 60522,
-    "cache_read_tokens": 5335425,
-    "total_tokens": 9639044,
-    "cost_input": 2.8735565999999992,
-    "cost_output": 0.15130500000000016,
-    "cost_cache_read": 0.08003137500000007,
-    "cost_usd": 3.104892975000001,
-    "call_count": 442
+    "input_tokens": 9832327,
+    "output_tokens": 61868,
+    "cache_read_tokens": 5485570,
+    "total_tokens": 9894195,
+    "cost_input": 2.9496980999999995,
+    "cost_output": 0.15467000000000014,
+    "cost_cache_read": 0.08228355000000005,
+    "cost_usd": 3.1866516500000004,
+    "call_count": 455
   },
   {
     "date": "2026-03-04",
@@ -76,15 +76,15 @@ const USAGE_DATA = [
     "date": "2026-03-04",
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "input_tokens": 456,
-    "output_tokens": 75400,
-    "cache_read_tokens": 15415550,
-    "total_tokens": 18369546,
+    "input_tokens": 475,
+    "output_tokens": 77839,
+    "cache_read_tokens": 15790782,
+    "total_tokens": 20974056,
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 78.967606,
-    "call_count": 239,
+    "cost_usd": 84.588456,
+    "call_count": 260,
     "estimated": true
   },
   {
@@ -1376,12 +1376,42 @@ const USAGE_DATA = [
 const HOURLY_DATA = [
   {
     "date": "2026-03-04",
+    "hour": 13,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 117610,
+    "cost_usd": 0.03760782,
+    "call_count": 6,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-04",
+    "hour": 13,
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "total_tokens": 2313311,
+    "cost_usd": 2.713815,
+    "call_count": 21,
+    "estimated": true
+  },
+  {
+    "date": "2026-03-04",
+    "hour": 13,
+    "provider": "perplexity",
+    "model": "sonar-pro",
+    "total_tokens": 16500,
+    "cost_usd": 0.05499999999999999,
+    "call_count": 11,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-04",
     "hour": 12,
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "total_tokens": 208190,
-    "cost_usd": 0.06659937,
-    "call_count": 11,
+    "total_tokens": 345731,
+    "cost_usd": 0.11075022500000001,
+    "call_count": 18,
     "estimated": false
   },
   {
@@ -1389,10 +1419,10 @@ const HOURLY_DATA = [
     "hour": 12,
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "total_tokens": 220706,
-    "cost_usd": 0.355553,
+    "total_tokens": 511905,
+    "cost_usd": 3.262589,
     "call_count": 7,
-    "estimated": true
+    "estimated": false
   },
   {
     "date": "2026-03-04",
