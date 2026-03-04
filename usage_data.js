@@ -1,4 +1,4 @@
-const GENERATED_AT = "2026-03-04T09:30:14.000182+00:00";
+const GENERATED_AT = "2026-03-04T10:30:13.152644+00:00";
 const TZ_LABEL = "UTC-5 (EST)";
 const USAGE_DATA = [
   {
@@ -33,15 +33,15 @@ const USAGE_DATA = [
     "date": "2026-03-04",
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "input_tokens": 2902982,
-    "output_tokens": 11972,
-    "cache_read_tokens": 1897384,
-    "total_tokens": 2914954,
-    "cost_input": 0.8708945999999999,
-    "cost_output": 0.029930000000000005,
-    "cost_cache_read": 0.028460759999999998,
-    "cost_usd": 0.9292853600000002,
-    "call_count": 167
+    "input_tokens": 3089342,
+    "output_tokens": 13436,
+    "cache_read_tokens": 1945324,
+    "total_tokens": 3102778,
+    "cost_input": 0.9268025999999999,
+    "cost_output": 0.03359000000000001,
+    "cost_cache_read": 0.02917986,
+    "cost_usd": 0.9895724600000002,
+    "call_count": 178
   },
   {
     "date": "2026-03-04",
@@ -76,16 +76,16 @@ const USAGE_DATA = [
     "date": "2026-03-04",
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "input_tokens": 78,
-    "output_tokens": 7661,
-    "cache_read_tokens": 2841142,
-    "total_tokens": 3599538,
+    "input_tokens": 91,
+    "output_tokens": 8988,
+    "cache_read_tokens": 2998311,
+    "total_tokens": 3694986,
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 17.05628,
+    "cost_usd": 18.065357,
     "call_count": 17,
-    "estimated": true
+    "estimated": false
   },
   {
     "date": "2026-03-03",
@@ -1376,12 +1376,22 @@ const USAGE_DATA = [
 const HOURLY_DATA = [
   {
     "date": "2026-03-04",
+    "hour": 5,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 102659,
+    "cost_usd": 0.032837065,
+    "call_count": 6,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-04",
     "hour": 4,
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "total_tokens": 179899,
-    "cost_usd": 0.057357019999999995,
-    "call_count": 11,
+    "total_tokens": 265064,
+    "cost_usd": 0.084807055,
+    "call_count": 16,
     "estimated": false
   },
   {
@@ -1389,10 +1399,10 @@ const HOURLY_DATA = [
     "hour": 4,
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "total_tokens": 109958,
-    "cost_usd": 0.205715,
+    "total_tokens": 205406,
+    "cost_usd": 1.214792,
     "call_count": 5,
-    "estimated": true
+    "estimated": false
   },
   {
     "date": "2026-03-04",
