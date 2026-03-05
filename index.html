@@ -89,6 +89,24 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
 .audit-warn{color:#e3b341;font-weight:700;cursor:help}
 .audit-none{color:#484f58;cursor:help}
 .hour-select{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:6px 8px;font-size:.82em;min-width:110px}
+.ledger-section{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;margin-bottom:20px}
+.ledger-section h2{font-size:.95em;color:#c9d1d9;margin-bottom:14px}
+.ledger-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.ledger-grid{grid-template-columns:1fr}}
+.ledger-tbl{width:100%;border-collapse:collapse;font-size:.85em}
+.ledger-tbl th{padding:6px 10px;text-align:left;font-size:.75em;text-transform:uppercase;letter-spacing:.5px;color:#8b949e;border-bottom:1px solid #30363d;background:#21262d}
+.ledger-tbl td{padding:6px 10px;border-bottom:1px solid #21262d}
+.ledger-tbl td.n{text-align:right;font-variant-numeric:tabular-nums}
+.cal-card{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:14px}
+.cal-card .cal-title{font-size:.8em;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.cal-row{display:flex;justify-content:space-between;margin-bottom:6px;font-size:.85em}
+.cal-row .cal-lbl{color:#8b949e}
+.cal-row .cal-val{color:#f0f6fc;font-weight:600;font-variant-numeric:tabular-nums}
+.cal-row .cal-val.good{color:#3fb950}
+.cal-row .cal-val.warn{color:#e3b341}
+.cal-divider{border-top:1px solid #30363d;margin:8px 0}
+.cal-ratio{font-size:1.3em;text-align:center;color:#58a6ff;font-weight:700;margin-top:8px}
+.cal-ratio-label{font-size:.75em;text-align:center;color:#8b949e;margin-top:2px}
 </style>
 </head>
 <body>
@@ -101,6 +119,8 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
   <a href="https://aistudio.google.com/u/1/spend" target="_blank" style="color:#3b82f6;text-decoration:none">Google Spend ↗</a>
   <a href="https://aistudio.google.com/u/1/rate-limit?timeRange=last-1-day" target="_blank" style="color:#3b82f6;text-decoration:none">Google Rate Limits ↗</a>
   <a href="https://console.cloud.google.com/billing/011B7B-A87B16-7E5656/reports;timeRange=LAST_30_DAYS;grouping=GROUP_BY_PROJECT_ANCESTRY?authuser=1&organizationId=597918355300" target="_blank" style="color:#3b82f6;text-decoration:none">GCP Billing ↗</a>
+  <a href="https://platform.claude.com/settings/billing" target="_blank" style="color:#f97316;text-decoration:none">Anthropic Billing ↗</a>
+  <a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index" target="_blank" style="color:#8b949e;text-decoration:none">AI Intelligence Index ↗</a>
 </div>
 <div class="cards" id="cards"></div>
 <div class="section">
@@ -113,6 +133,27 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
   </div>
   <div class="legend" id="legend"></div>
   <div id="chart"></div>
+</div>
+<div class="ledger-section" id="ledger-section">
+  <div class="sec-head">
+    <h2>💳 Anthropic Credit Ledger &amp; Calibration</h2>
+    <div style="font-size:.78em;color:#8b949e">
+      Edit <code>credit-ledger.js</code> to update · Balance from <a href="https://platform.claude.com/settings/billing" target="_blank" style="color:#58a6ff">billing page</a>
+    </div>
+  </div>
+  <div class="ledger-grid">
+    <div>
+      <div class="tbl-wrap" style="max-height:320px;overflow-y:auto">
+        <table class="ledger-tbl">
+          <thead><tr><th>Date</th><th>Credit (USD)</th><th>Note</th></tr></thead>
+          <tbody id="ledger-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="cal-card" id="cal-card">
+      <!-- Populated by JS -->
+    </div>
+  </div>
 </div>
 <div class="section">
   <div class="sec-head">
@@ -230,6 +271,10 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
       <a href="https://aistudio.google.com/u/1/spend" target="_blank" style="color:#58a6ff">AI Studio Spend</a> ·
       <a href="https://console.cloud.google.com/billing/011B7B-A87B16-7E5656/reports;timeRange=LAST_30_DAYS;grouping=GROUP_BY_PROJECT_ANCESTRY?authuser=1&organizationId=597918355300" target="_blank" style="color:#58a6ff">Cloud Billing Console</a>
     </p>
+    <p style="margin-bottom:4px;margin-top:12px"><strong>Benchmarks &amp; Intelligence</strong></p>
+    <p>
+      <a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index" target="_blank" style="color:#58a6ff">Artificial Analysis Intelligence Index</a>
+    </p>
     <h3>Cost Calculation</h3>
     <p>Costs for Anthropic and Google are calculated by OpenClaw's billing layer at response time and stored in session JSONL. This dashboard reads those pre-calculated values. Cache read tokens billed at ~10% of input rate. Google implicit caching (auto since May 2025) already reflected in amounts.</p>
     <h3>Audit Column</h3>
@@ -241,6 +286,7 @@ td.n{text-align:right;font-variant-numeric:tabular-nums}
     <p>All dates and hours are displayed in <strong>Eastern Time</strong> (EST/EDT). The system auto-adjusts for daylight saving time using <code>America/Toronto</code>.</p>
   </div>
 </div>
+<script src="credit-ledger.js"></script>
 <script src="usage_data.js"></script>
 <script src="audit-anthropic.js"></script>
 <script src="app.js"></script>

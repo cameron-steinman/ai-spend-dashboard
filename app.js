@@ -314,6 +314,60 @@ function openM(){document.getElementById('ov').classList.add('open')}
 function closeM(){document.getElementById('ov').classList.remove('open')}
 document.getElementById('ov').addEventListener('click',function(e){if(e.target.id==='ov')closeM()});
 
+// ─── CREDIT LEDGER & CALIBRATION ─────────────────────────────
+function buildLedger(){
+  var ledgerTbody=document.getElementById('ledger-tbody');
+  var calCard=document.getElementById('cal-card');
+  if(!ledgerTbody||!calCard) return;
+
+  // Load ledger data
+  var ledger=(typeof CREDIT_LEDGER!=='undefined')?CREDIT_LEDGER:{};
+  var anth=ledger.anthropic||{};
+  var entries=anth.entries||[];
+  var currentBalance=anth.current_balance||0;
+  var balanceCheckedAt=anth.balance_checked_at||'';
+
+  // Load calibration data
+  var cal=(typeof CALIBRATION_DATA!=='undefined')?CALIBRATION_DATA:{};
+  var totalCredits=cal.total_credits_purchased||0;
+  var actualSpend=cal.actual_spend_from_ledger||0;
+  var calculatedSpend=cal.our_calculated_spend_total||0;
+  var ratio=cal.calibration_ratio||0;
+
+  // If no CALIBRATION_DATA, compute from ledger
+  if(!totalCredits&&entries.length>0){
+    totalCredits=entries.reduce(function(s,e){return s+(e.amount||0)},0);
+    actualSpend=totalCredits-currentBalance;
+  }
+
+  // Build ledger table
+  var html='';
+  var running=0;
+  entries.forEach(function(e){
+    running+=e.amount||0;
+    html+='<tr><td>'+e.date+'</td><td class="n">'+fmt$(e.amount)+'</td><td style="color:#8b949e;font-size:.9em">'+(e.note||'')+'</td></tr>';
+  });
+  html+='<tr style="border-top:2px solid #30363d;font-weight:700"><td>Total Purchased</td><td class="n">'+fmt$(running)+'</td><td></td></tr>';
+  ledgerTbody.innerHTML=html;
+
+  // Build calibration card
+  var balDate=balanceCheckedAt?new Date(balanceCheckedAt).toLocaleDateString('en-CA',{timeZone:'America/Toronto'}):'—';
+  var ratioClass=ratio>0.5?'good':ratio>0.3?'':'warn';
+
+  calCard.innerHTML=
+    '<div class="cal-title">Anthropic Cost Calibration</div>'+
+    '<div class="cal-row"><span class="cal-lbl">Credits Purchased</span><span class="cal-val">'+fmt$(totalCredits)+'</span></div>'+
+    '<div class="cal-row"><span class="cal-lbl">Current Balance</span><span class="cal-val good">'+fmt$(currentBalance)+'</span></div>'+
+    '<div class="cal-row"><span class="cal-lbl">Balance Checked</span><span class="cal-val" style="font-weight:400;color:#8b949e">'+balDate+'</span></div>'+
+    '<div class="cal-divider"></div>'+
+    '<div class="cal-row"><span class="cal-lbl">Actual Spend (invoiced)</span><span class="cal-val">'+fmt$(actualSpend)+'</span></div>'+
+    '<div class="cal-row"><span class="cal-lbl">Calculated Spend (list price)</span><span class="cal-val" style="color:#8b949e;text-decoration:line-through">'+fmt$(calculatedSpend)+'</span></div>'+
+    '<div class="cal-divider"></div>'+
+    '<div class="cal-ratio '+ ratioClass+'">'+( ratio?(ratio*100).toFixed(1)+'%':'—')+'</div>'+
+    '<div class="cal-ratio-label">Effective rate vs list price'+(ratio?' · multiply list prices by '+(ratio).toFixed(3):'')+'</div>'+
+    '<div style="margin-top:12px;font-size:.75em;color:#484f58;text-align:center">All dashboard Anthropic costs are calibrated using this ratio</div>';
+}
+
 (function init(){
   var fpS=document.getElementById('fp');
   allProv.forEach(function(p){fpS.add(new Option(p,p))});
@@ -323,5 +377,6 @@ document.getElementById('ov').addEventListener('click',function(e){if(e.target.i
   if(tzEl) tzEl.textContent=tzLabel;
   buildCards();
   buildChart();
+  buildLedger();
   setView('daily');
 })();
