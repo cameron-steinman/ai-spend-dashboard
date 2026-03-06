@@ -1,4 +1,4 @@
-const GENERATED_AT = "2026-03-06T01:30:11.759021+00:00";
+const GENERATED_AT = "2026-03-06T02:30:13.726550+00:00";
 const TZ_LABEL = "UTC-5 (EST)";
 const USAGE_DATA = [
   {
@@ -13,21 +13,21 @@ const USAGE_DATA = [
     "cost_output": 0,
     "cost_cache_read": 0,
     "cost_usd": 0,
-    "call_count": 60
+    "call_count": 64
   },
   {
     "date": "2026-03-05",
     "provider": "openai",
     "model": "gpt-4.1-mini",
-    "input_tokens": 260313,
-    "output_tokens": 251,
+    "input_tokens": 335438,
+    "output_tokens": 257,
     "cache_read_tokens": 105984,
-    "total_tokens": 366548,
-    "cost_input": 0.1041252,
-    "cost_output": 0.00040160000000000006,
+    "total_tokens": 441679,
+    "cost_input": 0.13417520000000002,
+    "cost_output": 0.0004112,
     "cost_cache_read": 0.010598400000000001,
-    "cost_usd": 0.11512520000000001,
-    "call_count": 3
+    "cost_usd": 0.1451848,
+    "call_count": 4
   },
   {
     "date": "2026-03-05",
@@ -47,29 +47,29 @@ const USAGE_DATA = [
     "date": "2026-03-05",
     "provider": "openai",
     "model": "gpt-4.1",
-    "input_tokens": 461155,
-    "output_tokens": 5935,
-    "cache_read_tokens": 355968,
-    "total_tokens": 823058,
-    "cost_input": 0.92231,
-    "cost_output": 0.04748,
-    "cost_cache_read": 0.17798399999999998,
-    "cost_usd": 1.1477739999999998,
-    "call_count": 109
+    "input_tokens": 585513,
+    "output_tokens": 6567,
+    "cache_read_tokens": 390144,
+    "total_tokens": 982224,
+    "cost_input": 1.1710260000000001,
+    "cost_output": 0.05253599999999999,
+    "cost_cache_read": 0.19507199999999997,
+    "cost_usd": 1.4186339999999997,
+    "call_count": 148
   },
   {
     "date": "2026-03-05",
     "provider": "perplexity",
     "model": "sonar-pro",
-    "input_tokens": 588000,
-    "output_tokens": 294000,
+    "input_tokens": 601000,
+    "output_tokens": 300500,
     "cache_read_tokens": 0,
-    "total_tokens": 882000,
-    "cost_input": 1.7639999999999731,
-    "cost_output": 1.1760000000000008,
+    "total_tokens": 901500,
+    "cost_input": 1.8029999999999717,
+    "cost_output": 1.2020000000000008,
     "cost_cache_read": 0,
-    "cost_usd": 2.9399999999999595,
-    "call_count": 588
+    "cost_usd": 3.004999999999958,
+    "call_count": 601
   },
   {
     "date": "2026-03-05",
@@ -89,86 +89,86 @@ const USAGE_DATA = [
     "date": "2026-03-05",
     "provider": "google2",
     "model": "gemini-2.5-flash",
-    "input_tokens": 11543005,
-    "output_tokens": 109881,
-    "cache_read_tokens": 8122153,
-    "total_tokens": 11652886,
-    "cost_input": 3.4629014999999987,
-    "cost_output": 0.27470250000000007,
-    "cost_cache_read": 0.12183229499999998,
-    "cost_usd": 3.8594362950000005,
-    "call_count": 345
+    "input_tokens": 12740977,
+    "output_tokens": 124307,
+    "cache_read_tokens": 8891699,
+    "total_tokens": 12865284,
+    "cost_input": 3.8222930999999996,
+    "cost_output": 0.31076750000000014,
+    "cost_cache_read": 0.133375485,
+    "cost_usd": 4.266436084999998,
+    "call_count": 383
   },
   {
     "date": "2026-03-05",
     "provider": "google4",
     "model": "gemini-2.5-flash",
-    "input_tokens": 18278902,
-    "output_tokens": 221430,
-    "cache_read_tokens": 15087305,
-    "total_tokens": 18500332,
-    "cost_input": 5.4836705999999955,
-    "cost_output": 0.5535749999999994,
-    "cost_cache_read": 0.22630957500000004,
-    "cost_usd": 6.263555175000007,
-    "call_count": 505
+    "input_tokens": 25866122,
+    "output_tokens": 292472,
+    "cache_read_tokens": 21047954,
+    "total_tokens": 26158594,
+    "cost_input": 7.759836599999999,
+    "cost_output": 0.7311799999999996,
+    "cost_cache_read": 0.31571930999999975,
+    "cost_usd": 8.806735910000013,
+    "call_count": 736
   },
   {
     "date": "2026-03-05",
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "input_tokens": 26422362,
-    "output_tokens": 281961,
-    "cache_read_tokens": 17539912,
-    "total_tokens": 26704323,
-    "cost_input": 7.926708599999983,
-    "cost_output": 0.7049025000000002,
-    "cost_cache_read": 0.26309868,
-    "cost_usd": 8.894709780000015,
-    "call_count": 913
-  },
-  {
-    "date": "2026-03-05",
-    "provider": "google",
-    "model": "gemini-2.5-pro",
-    "input_tokens": 10964463,
-    "output_tokens": 39553,
-    "cache_read_tokens": 5937889,
-    "total_tokens": 11004016,
-    "cost_input": 13.705578749999995,
-    "cost_output": 0.39553000000000016,
-    "cost_cache_read": 1.8407455899999996,
-    "cost_usd": 15.941854340000004,
-    "call_count": 112
+    "input_tokens": 32344156,
+    "output_tokens": 318393,
+    "cache_read_tokens": 21697060,
+    "total_tokens": 32662549,
+    "cost_input": 9.703246800000024,
+    "cost_output": 0.7959825000000008,
+    "cost_cache_read": 0.32545590000000024,
+    "cost_usd": 10.824685200000006,
+    "call_count": 1089
   },
   {
     "date": "2026-03-05",
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
-    "input_tokens": 535,
-    "output_tokens": 165302,
-    "cache_read_tokens": 24742853,
-    "total_tokens": 35139426,
+    "input_tokens": 592,
+    "output_tokens": 204301,
+    "cache_read_tokens": 24827352,
+    "total_tokens": 36579245,
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 17.034043,
-    "call_count": 260,
+    "cost_usd": 18.770119,
+    "call_count": 262,
     "estimated": true
+  },
+  {
+    "date": "2026-03-05",
+    "provider": "google",
+    "model": "gemini-2.5-pro",
+    "input_tokens": 19202265,
+    "output_tokens": 73981,
+    "cache_read_tokens": 11716711,
+    "total_tokens": 19276246,
+    "cost_input": 24.002831250000007,
+    "cost_output": 0.7398099999999994,
+    "cost_cache_read": 3.6321804099999997,
+    "cost_usd": 28.374821660000006,
+    "call_count": 242
   },
   {
     "date": "2026-03-05",
     "provider": "anthropic",
     "model": "claude-opus-4-6",
-    "input_tokens": 13657,
-    "output_tokens": 223507,
-    "cache_read_tokens": 54651046,
-    "total_tokens": 82482125,
+    "input_tokens": 16704,
+    "output_tokens": 304264,
+    "cache_read_tokens": 78193148,
+    "total_tokens": 97233144,
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 126.065762,
-    "call_count": 729,
+    "cost_usd": 145.219356,
+    "call_count": 889,
     "estimated": true
   },
   {
@@ -252,7 +252,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 1.638655,
+    "cost_usd": 1.619538,
     "call_count": 126,
     "estimated": false
   },
@@ -323,7 +323,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 200.989108,
+    "cost_usd": 198.644283,
     "call_count": 1184,
     "estimated": false
   },
@@ -366,7 +366,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 1.116187,
+    "cost_usd": 1.103165,
     "call_count": 96,
     "estimated": false
   },
@@ -423,7 +423,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 62.69682,
+    "cost_usd": 61.965372,
     "call_count": 362,
     "estimated": false
   },
@@ -480,7 +480,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 4.304259,
+    "cost_usd": 4.254044,
     "call_count": 301,
     "estimated": false
   },
@@ -537,7 +537,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 23.14082,
+    "cost_usd": 22.870849,
     "call_count": 1065,
     "estimated": false
   },
@@ -566,7 +566,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 181.06221,
+    "cost_usd": 178.949861,
     "call_count": 1283,
     "estimated": false
   },
@@ -679,7 +679,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 21.293821,
+    "cost_usd": 21.045398,
     "call_count": 363,
     "estimated": false
   },
@@ -694,7 +694,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 141.810308,
+    "cost_usd": 140.155888,
     "call_count": 712,
     "estimated": false
   },
@@ -807,7 +807,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 13.640208,
+    "cost_usd": 13.481075,
     "call_count": 218,
     "estimated": false
   },
@@ -836,7 +836,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 142.691151,
+    "cost_usd": 141.026455,
     "call_count": 578,
     "estimated": false
   },
@@ -879,7 +879,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 3.374916,
+    "cost_usd": 3.335543,
     "call_count": 72,
     "estimated": false
   },
@@ -922,7 +922,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 185.172696,
+    "cost_usd": 183.012393,
     "call_count": 644,
     "estimated": false
   },
@@ -1007,7 +1007,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 13.671149,
+    "cost_usd": 13.511655,
     "call_count": 44,
     "estimated": false
   },
@@ -1022,7 +1022,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 179.215395,
+    "cost_usd": 177.124592,
     "call_count": 576,
     "estimated": false
   },
@@ -1093,7 +1093,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 2.375771,
+    "cost_usd": 2.348054,
     "call_count": 4,
     "estimated": false
   },
@@ -1122,7 +1122,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 80.725202,
+    "cost_usd": 79.783427,
     "call_count": 296,
     "estimated": false
   },
@@ -1165,7 +1165,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 20.240629,
+    "cost_usd": 20.004493,
     "call_count": 28,
     "estimated": false
   },
@@ -1222,7 +1222,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 69.460478,
+    "cost_usd": 68.650123,
     "call_count": 52,
     "estimated": false
   },
@@ -1237,7 +1237,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 1.218668,
+    "cost_usd": 1.20445,
     "call_count": 0,
     "estimated": false
   },
@@ -1252,7 +1252,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 30.656602,
+    "cost_usd": 30.298949,
     "call_count": 0,
     "estimated": false
   },
@@ -1267,7 +1267,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 11.944124,
+    "cost_usd": 11.804779,
     "call_count": 0,
     "estimated": false
   },
@@ -1296,7 +1296,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 0.178733,
+    "cost_usd": 0.176648,
     "call_count": 0,
     "estimated": false
   },
@@ -1325,7 +1325,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 77.830076,
+    "cost_usd": 76.922077,
     "call_count": 23,
     "estimated": false
   },
@@ -1354,7 +1354,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 0.657967,
+    "cost_usd": 0.650291,
     "call_count": 0,
     "estimated": false
   },
@@ -1383,7 +1383,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 59.56967,
+    "cost_usd": 58.874704,
     "call_count": 20,
     "estimated": false
   },
@@ -1398,7 +1398,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 0.718609,
+    "cost_usd": 0.710225,
     "call_count": 0,
     "estimated": false
   },
@@ -1413,7 +1413,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 66.494461,
+    "cost_usd": 65.718709,
     "call_count": 0,
     "estimated": false
   },
@@ -1428,7 +1428,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 2.934241,
+    "cost_usd": 2.900009,
     "call_count": 0,
     "estimated": false
   },
@@ -1443,7 +1443,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 0.12424,
+    "cost_usd": 0.122791,
     "call_count": 0,
     "estimated": false
   },
@@ -1458,7 +1458,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 7.195659,
+    "cost_usd": 7.111711,
     "call_count": 0,
     "estimated": false
   },
@@ -1473,7 +1473,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 0.405311,
+    "cost_usd": 0.400583,
     "call_count": 0,
     "estimated": false
   },
@@ -1488,7 +1488,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 1.419865,
+    "cost_usd": 1.4033,
     "call_count": 0,
     "estimated": false
   },
@@ -1503,7 +1503,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 7.513506,
+    "cost_usd": 7.425851,
     "call_count": 0,
     "estimated": false
   },
@@ -1518,7 +1518,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 117.339221,
+    "cost_usd": 115.970292,
     "call_count": 0,
     "estimated": false
   },
@@ -1533,7 +1533,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 1.328324,
+    "cost_usd": 1.312827,
     "call_count": 0,
     "estimated": false
   },
@@ -1548,7 +1548,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 119.538039,
+    "cost_usd": 118.143458,
     "call_count": 0,
     "estimated": false
   },
@@ -1563,7 +1563,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 88.020957,
+    "cost_usd": 86.994067,
     "call_count": 0,
     "estimated": false
   },
@@ -1578,7 +1578,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 0.023405,
+    "cost_usd": 0.023132,
     "call_count": 0,
     "estimated": false
   },
@@ -1593,7 +1593,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 0.159001,
+    "cost_usd": 0.157146,
     "call_count": 0,
     "estimated": false
   },
@@ -1608,7 +1608,7 @@ const USAGE_DATA = [
     "cost_input": 0,
     "cost_output": 0,
     "cost_cache_read": 0,
-    "cost_usd": 67.095648,
+    "cost_usd": 66.312882,
     "call_count": 0,
     "estimated": false
   }
@@ -1616,12 +1616,172 @@ const USAGE_DATA = [
 const HOURLY_DATA = [
   {
     "date": "2026-03-05",
+    "hour": 21,
+    "provider": "google",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 5268579,
+    "cost_usd": 1.7037675850000003,
+    "call_count": 149,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "google4",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 4891370,
+    "cost_usd": 1.6355523250000001,
+    "call_count": 154,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "total_tokens": 4211524,
+    "cost_usd": 1.392581,
+    "call_count": 57,
+    "estimated": true
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "google",
+    "model": "gemini-2.5-pro",
+    "total_tokens": 6518345,
+    "cost_usd": 9.89715334,
+    "call_count": 109,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "openai",
+    "model": "gpt-4.1",
+    "total_tokens": 90569,
+    "cost_usd": 0.18223599999999998,
+    "call_count": 27,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "total_tokens": 75131,
+    "cost_usd": 0.030059600000000002,
+    "call_count": 1,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "total_tokens": 91239,
+    "cost_usd": 0.11981,
+    "call_count": 2,
+    "estimated": true
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "openclaw",
+    "model": "delivery-mirror",
+    "total_tokens": 0,
+    "cost_usd": 0,
+    "call_count": 1,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "google2",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 196134,
+    "cost_usd": 0.070779055,
+    "call_count": 6,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 21,
+    "provider": "perplexity",
+    "model": "sonar-pro",
+    "total_tokens": 3000,
+    "cost_usd": 0.01,
+    "call_count": 2,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 20,
+    "provider": "openai",
+    "model": "gpt-4.1",
+    "total_tokens": 68597,
+    "cost_usd": 0.088624,
+    "call_count": 24,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 20,
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "total_tokens": 24937757,
+    "cost_usd": 23.023694,
+    "call_count": 234,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
     "hour": 20,
     "provider": "google",
     "model": "gemini-2.5-flash",
-    "total_tokens": 8234527,
-    "cost_usd": 2.802401885000004,
-    "call_count": 297,
+    "total_tokens": 8924174,
+    "cost_usd": 3.028609720000005,
+    "call_count": 324,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 20,
+    "provider": "google4",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 9109472,
+    "cost_usd": 3.0775396149999996,
+    "call_count": 305,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 20,
+    "provider": "google2",
+    "model": "gemini-2.5-flash",
+    "total_tokens": 3178411,
+    "cost_usd": 1.0710861549999995,
+    "call_count": 111,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 20,
+    "provider": "perplexity",
+    "model": "sonar-pro",
+    "total_tokens": 405000,
+    "cost_usd": 1.3499999999999932,
+    "call_count": 270,
+    "estimated": false
+  },
+  {
+    "date": "2026-03-05",
+    "hour": 20,
+    "provider": "google",
+    "model": "gemini-2.5-pro",
+    "total_tokens": 2830042,
+    "cost_usd": 4.127278190000001,
+    "call_count": 32,
     "estimated": false
   },
   {
@@ -1631,67 +1791,7 @@ const HOURLY_DATA = [
     "model": "delivery-mirror",
     "total_tokens": 0,
     "cost_usd": 0,
-    "call_count": 3,
-    "estimated": false
-  },
-  {
-    "date": "2026-03-05",
-    "hour": 20,
-    "provider": "google4",
-    "model": "gemini-2.5-flash",
-    "total_tokens": 6342580,
-    "cost_usd": 2.169911205000002,
-    "call_count": 228,
-    "estimated": false
-  },
-  {
-    "date": "2026-03-05",
-    "hour": 20,
-    "provider": "perplexity",
-    "model": "sonar-pro",
-    "total_tokens": 388500,
-    "cost_usd": 1.2949999999999944,
-    "call_count": 259,
-    "estimated": false
-  },
-  {
-    "date": "2026-03-05",
-    "hour": 20,
-    "provider": "anthropic",
-    "model": "claude-opus-4-6",
-    "total_tokens": 14398262,
-    "cost_usd": 3.836704,
-    "call_count": 131,
-    "estimated": true
-  },
-  {
-    "date": "2026-03-05",
-    "hour": 20,
-    "provider": "google2",
-    "model": "gemini-2.5-flash",
-    "total_tokens": 2162147,
-    "cost_usd": 0.7348654199999999,
-    "call_count": 79,
-    "estimated": false
-  },
-  {
-    "date": "2026-03-05",
-    "hour": 20,
-    "provider": "google",
-    "model": "gemini-2.5-pro",
-    "total_tokens": 1076157,
-    "cost_usd": 1.5914642100000003,
-    "call_count": 11,
-    "estimated": false
-  },
-  {
-    "date": "2026-03-05",
-    "hour": 20,
-    "provider": "openai",
-    "model": "gpt-4.1",
-    "total_tokens": 0,
-    "cost_usd": 0,
-    "call_count": 12,
+    "call_count": 6,
     "estimated": false
   },
   {
@@ -1699,10 +1799,10 @@ const HOURLY_DATA = [
     "hour": 20,
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
-    "total_tokens": 187567,
-    "cost_usd": 0.248379,
+    "total_tokens": 1536147,
+    "cost_usd": 2.060473,
     "call_count": 2,
-    "estimated": true
+    "estimated": false
   },
   {
     "date": "2026-03-05",
@@ -1740,7 +1840,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 11028260,
-    "cost_usd": 18.078649,
+    "cost_usd": 17.867736,
     "call_count": 78,
     "estimated": false
   },
@@ -1810,7 +1910,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 4654691,
-    "cost_usd": 2.483176,
+    "cost_usd": 2.454206,
     "call_count": 28,
     "estimated": false
   },
@@ -1850,7 +1950,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 9371063,
-    "cost_usd": 4.005739,
+    "cost_usd": 3.959006,
     "call_count": 61,
     "estimated": false
   },
@@ -1880,7 +1980,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6999939,
-    "cost_usd": 9.636628,
+    "cost_usd": 9.524203,
     "call_count": 99,
     "estimated": false
   },
@@ -1980,7 +2080,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 6356659,
-    "cost_usd": 2.380362,
+    "cost_usd": 2.352592,
     "call_count": 58,
     "estimated": false
   },
@@ -2010,7 +2110,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3903475,
-    "cost_usd": 11.315293,
+    "cost_usd": 11.183284,
     "call_count": 11,
     "estimated": false
   },
@@ -2070,7 +2170,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7334059,
-    "cost_usd": 11.818733,
+    "cost_usd": 11.68085,
     "call_count": 51,
     "estimated": false
   },
@@ -2090,7 +2190,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 4338138,
-    "cost_usd": 2.77625,
+    "cost_usd": 2.743861,
     "call_count": 31,
     "estimated": false
   },
@@ -2150,7 +2250,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 7539760,
-    "cost_usd": 4.180655,
+    "cost_usd": 4.131881,
     "call_count": 47,
     "estimated": false
   },
@@ -2190,7 +2290,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 12026758,
-    "cost_usd": 26.417943,
+    "cost_usd": 26.10974,
     "call_count": 80,
     "estimated": false
   },
@@ -2220,7 +2320,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5515433,
-    "cost_usd": 8.20063,
+    "cost_usd": 8.104958,
     "call_count": 64,
     "estimated": false
   },
@@ -2250,7 +2350,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1553898,
-    "cost_usd": 0.587628,
+    "cost_usd": 0.580772,
     "call_count": 15,
     "estimated": false
   },
@@ -2330,7 +2430,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 394421,
-    "cost_usd": 0.929637,
+    "cost_usd": 0.918791,
     "call_count": 0,
     "estimated": false
   },
@@ -2360,7 +2460,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 280231,
-    "cost_usd": 0.853966,
+    "cost_usd": 0.844003,
     "call_count": 0,
     "estimated": false
   },
@@ -2370,7 +2470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 11616715,
-    "cost_usd": 18.655895,
+    "cost_usd": 18.438247,
     "call_count": 144,
     "estimated": false
   },
@@ -2440,7 +2540,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 777178,
-    "cost_usd": 0.277094,
+    "cost_usd": 0.273862,
     "call_count": 6,
     "estimated": false
   },
@@ -2470,7 +2570,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 546045,
-    "cost_usd": 0.875867,
+    "cost_usd": 0.865649,
     "call_count": 9,
     "estimated": false
   },
@@ -2500,7 +2600,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3337461,
-    "cost_usd": 4.135634,
+    "cost_usd": 4.087386,
     "call_count": 46,
     "estimated": false
   },
@@ -2530,7 +2630,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 186538,
-    "cost_usd": 0.461016,
+    "cost_usd": 0.455638,
     "call_count": 0,
     "estimated": false
   },
@@ -2550,7 +2650,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 186584,
-    "cost_usd": 0.46029,
+    "cost_usd": 0.45492,
     "call_count": 0,
     "estimated": false
   },
@@ -2570,7 +2670,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 184980,
-    "cost_usd": 0.451055,
+    "cost_usd": 0.445793,
     "call_count": 0,
     "estimated": false
   },
@@ -2590,7 +2690,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 98838,
-    "cost_usd": 0.371901,
+    "cost_usd": 0.367562,
     "call_count": 3,
     "estimated": false
   },
@@ -2610,7 +2710,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 360472,
-    "cost_usd": 0.094762,
+    "cost_usd": 0.093656,
     "call_count": 12,
     "estimated": false
   },
@@ -2630,7 +2730,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 997615,
-    "cost_usd": 2.453144,
+    "cost_usd": 2.424524,
     "call_count": 0,
     "estimated": false
   },
@@ -2650,7 +2750,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2007685,
-    "cost_usd": 3.776426,
+    "cost_usd": 3.732369,
     "call_count": 13,
     "estimated": false
   },
@@ -2680,7 +2780,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 821993,
-    "cost_usd": 1.730828,
+    "cost_usd": 1.710636,
     "call_count": 0,
     "estimated": false
   },
@@ -2700,7 +2800,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 616833,
-    "cost_usd": 1.605522,
+    "cost_usd": 1.586792,
     "call_count": 0,
     "estimated": false
   },
@@ -2720,7 +2820,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 616071,
-    "cost_usd": 1.601233,
+    "cost_usd": 1.582552,
     "call_count": 0,
     "estimated": false
   },
@@ -2740,7 +2840,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1005551,
-    "cost_usd": 1.82661,
+    "cost_usd": 1.8053,
     "call_count": 7,
     "estimated": false
   },
@@ -2760,7 +2860,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 780818,
-    "cost_usd": 1.652523,
+    "cost_usd": 1.633244,
     "call_count": 0,
     "estimated": false
   },
@@ -2780,7 +2880,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 574635,
-    "cost_usd": 1.509224,
+    "cost_usd": 1.491617,
     "call_count": 3,
     "estimated": false
   },
@@ -2790,7 +2890,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 11497510,
-    "cost_usd": 15.435273,
+    "cost_usd": 15.255198,
     "call_count": 138,
     "estimated": false
   },
@@ -2910,7 +3010,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 28236953,
-    "cost_usd": 41.923514,
+    "cost_usd": 41.434417,
     "call_count": 304,
     "estimated": false
   },
@@ -2950,7 +3050,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 18956990,
-    "cost_usd": 51.079824,
+    "cost_usd": 50.483905,
     "call_count": 115,
     "estimated": false
   },
@@ -3030,7 +3130,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 19427054,
-    "cost_usd": 29.423111,
+    "cost_usd": 29.079848,
     "call_count": 168,
     "estimated": false
   },
@@ -3130,7 +3230,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 11251701,
-    "cost_usd": 14.069831,
+    "cost_usd": 13.905687,
     "call_count": 126,
     "estimated": false
   },
@@ -3190,7 +3290,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7392656,
-    "cost_usd": 10.314483,
+    "cost_usd": 10.19415,
     "call_count": 63,
     "estimated": false
   },
@@ -3240,7 +3340,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2458959,
-    "cost_usd": 3.260494,
+    "cost_usd": 3.222456,
     "call_count": 21,
     "estimated": false
   },
@@ -3270,7 +3370,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 511905,
-    "cost_usd": 1.151345,
+    "cost_usd": 1.137913,
     "call_count": 7,
     "estimated": false
   },
@@ -3280,7 +3380,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7254509,
-    "cost_usd": 10.037336,
+    "cost_usd": 9.920236,
     "call_count": 76,
     "estimated": false
   },
@@ -3330,7 +3430,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 375260,
-    "cost_usd": 0.819501,
+    "cost_usd": 0.80994,
     "call_count": 2,
     "estimated": false
   },
@@ -3350,7 +3450,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 281910,
-    "cost_usd": 0.753475,
+    "cost_usd": 0.744685,
     "call_count": 0,
     "estimated": false
   },
@@ -3370,7 +3470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2958667,
-    "cost_usd": 3.974914,
+    "cost_usd": 3.928541,
     "call_count": 52,
     "estimated": false
   },
@@ -3420,7 +3520,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3185856,
-    "cost_usd": 4.886301,
+    "cost_usd": 4.829295,
     "call_count": 79,
     "estimated": false
   },
@@ -3450,7 +3550,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 230400,
-    "cost_usd": 0.483101,
+    "cost_usd": 0.477465,
     "call_count": 6,
     "estimated": false
   },
@@ -3460,7 +3560,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1197765,
-    "cost_usd": 0.265542,
+    "cost_usd": 0.262445,
     "call_count": 35,
     "estimated": false
   },
@@ -3490,7 +3590,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 167252,
-    "cost_usd": 0.411877,
+    "cost_usd": 0.407072,
     "call_count": 0,
     "estimated": false
   },
@@ -3510,7 +3610,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 205406,
-    "cost_usd": 0.428692,
+    "cost_usd": 0.42369,
     "call_count": 5,
     "estimated": false
   },
@@ -3540,7 +3640,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 5715717,
-    "cost_usd": 1.373112,
+    "cost_usd": 1.357093,
     "call_count": 91,
     "estimated": false
   },
@@ -3560,7 +3660,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2300149,
-    "cost_usd": 3.496877,
+    "cost_usd": 3.456081,
     "call_count": 4,
     "estimated": false
   },
@@ -3580,7 +3680,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 281489,
-    "cost_usd": 0.741242,
+    "cost_usd": 0.732595,
     "call_count": 0,
     "estimated": false
   },
@@ -3600,7 +3700,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 375514,
-    "cost_usd": 0.806576,
+    "cost_usd": 0.797166,
     "call_count": 0,
     "estimated": false
   },
@@ -3620,7 +3720,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 532428,
-    "cost_usd": 0.901751,
+    "cost_usd": 0.89123,
     "call_count": 8,
     "estimated": false
   },
@@ -3680,7 +3780,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 293722,
-    "cost_usd": 0.695387,
+    "cost_usd": 0.687274,
     "call_count": 3,
     "estimated": false
   },
@@ -3700,7 +3800,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2067641,
-    "cost_usd": 4.126975,
+    "cost_usd": 4.078828,
     "call_count": 14,
     "estimated": false
   },
@@ -3720,7 +3820,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1376667,
-    "cost_usd": 0.313643,
+    "cost_usd": 0.309984,
     "call_count": 38,
     "estimated": false
   },
@@ -3740,7 +3840,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 2869487,
-    "cost_usd": 0.802544,
+    "cost_usd": 0.793181,
     "call_count": 58,
     "estimated": false
   },
@@ -3750,7 +3850,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5189644,
-    "cost_usd": 8.684118,
+    "cost_usd": 8.582805,
     "call_count": 43,
     "estimated": false
   },
@@ -3810,7 +3910,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 952369,
-    "cost_usd": 1.348198,
+    "cost_usd": 1.332469,
     "call_count": 16,
     "estimated": false
   },
@@ -3860,7 +3960,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7156925,
-    "cost_usd": 9.537328,
+    "cost_usd": 9.426061,
     "call_count": 56,
     "estimated": false
   },
@@ -3940,7 +4040,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1165520,
-    "cost_usd": 3.092838,
+    "cost_usd": 3.056756,
     "call_count": 8,
     "estimated": false
   },
@@ -3980,7 +4080,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 8535457,
-    "cost_usd": 13.083153,
+    "cost_usd": 12.930519,
     "call_count": 95,
     "estimated": false
   },
@@ -4020,7 +4120,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 250903,
-    "cost_usd": 0.665006,
+    "cost_usd": 0.657248,
     "call_count": 0,
     "estimated": false
   },
@@ -4040,7 +4140,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 250917,
-    "cost_usd": 0.665193,
+    "cost_usd": 0.657433,
     "call_count": 0,
     "estimated": false
   },
@@ -4060,7 +4160,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 504656,
-    "cost_usd": 0.833017,
+    "cost_usd": 0.823298,
     "call_count": 0,
     "estimated": false
   },
@@ -4080,7 +4180,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 250963,
-    "cost_usd": 0.665883,
+    "cost_usd": 0.658115,
     "call_count": 0,
     "estimated": false
   },
@@ -4100,7 +4200,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 334011,
-    "cost_usd": 0.721991,
+    "cost_usd": 0.713568,
     "call_count": 0,
     "estimated": false
   },
@@ -4120,7 +4220,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 250868,
-    "cost_usd": 0.664649,
+    "cost_usd": 0.656895,
     "call_count": 0,
     "estimated": false
   },
@@ -4140,7 +4240,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 376212,
-    "cost_usd": 0.996267,
+    "cost_usd": 0.984644,
     "call_count": 0,
     "estimated": false
   },
@@ -4160,7 +4260,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5312741,
-    "cost_usd": 7.51728,
+    "cost_usd": 7.42958,
     "call_count": 56,
     "estimated": false
   },
@@ -4190,7 +4290,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4099745,
-    "cost_usd": 5.57752,
+    "cost_usd": 5.51245,
     "call_count": 53,
     "estimated": false
   },
@@ -4240,7 +4340,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 177538,
-    "cost_usd": 0.438904,
+    "cost_usd": 0.433784,
     "call_count": 4,
     "estimated": false
   },
@@ -4260,7 +4360,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 146922,
-    "cost_usd": 0.40142,
+    "cost_usd": 0.396737,
     "call_count": 0,
     "estimated": false
   },
@@ -4280,7 +4380,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 195251,
-    "cost_usd": 0.438852,
+    "cost_usd": 0.433732,
     "call_count": 0,
     "estimated": false
   },
@@ -4300,7 +4400,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 177345,
-    "cost_usd": 0.402157,
+    "cost_usd": 0.397465,
     "call_count": 9,
     "estimated": false
   },
@@ -4320,7 +4420,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 140081,
-    "cost_usd": 0.506588,
+    "cost_usd": 0.500678,
     "call_count": 5,
     "estimated": false
   },
@@ -4340,7 +4440,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 139635,
-    "cost_usd": 0.507706,
+    "cost_usd": 0.501783,
     "call_count": 0,
     "estimated": false
   },
@@ -4360,7 +4460,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 209444,
-    "cost_usd": 0.550658,
+    "cost_usd": 0.544234,
     "call_count": 0,
     "estimated": false
   },
@@ -4380,7 +4480,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 246603,
-    "cost_usd": 0.575733,
+    "cost_usd": 0.569016,
     "call_count": 0,
     "estimated": false
   },
@@ -4430,7 +4530,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 140284,
-    "cost_usd": 0.511941,
+    "cost_usd": 0.505969,
     "call_count": 0,
     "estimated": false
   },
@@ -4480,7 +4580,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 205787,
-    "cost_usd": 0.545627,
+    "cost_usd": 0.539262,
     "call_count": 4,
     "estimated": false
   },
@@ -4510,7 +4610,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 340469,
-    "cost_usd": 0.622388,
+    "cost_usd": 0.615126,
     "call_count": 0,
     "estimated": false
   },
@@ -4530,7 +4630,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3800515,
-    "cost_usd": 4.690078,
+    "cost_usd": 4.635361,
     "call_count": 54,
     "estimated": false
   },
@@ -4580,7 +4680,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5878059,
-    "cost_usd": 13.142357,
+    "cost_usd": 12.989033,
     "call_count": 48,
     "estimated": false
   },
@@ -4640,7 +4740,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3937948,
-    "cost_usd": 4.443739,
+    "cost_usd": 4.391896,
     "call_count": 60,
     "estimated": false
   },
@@ -4670,7 +4770,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 24882789,
-    "cost_usd": 25.8701,
+    "cost_usd": 25.568289,
     "call_count": 295,
     "estimated": false
   },
@@ -4720,7 +4820,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 23032496,
-    "cost_usd": 9.857376,
+    "cost_usd": 9.742375,
     "call_count": 366,
     "estimated": false
   },
@@ -4750,7 +4850,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 17549097,
-    "cost_usd": 6.064261,
+    "cost_usd": 5.993513,
     "call_count": 364,
     "estimated": false
   },
@@ -4770,7 +4870,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 23729306,
-    "cost_usd": 30.830369,
+    "cost_usd": 30.470689,
     "call_count": 223,
     "estimated": false
   },
@@ -4840,7 +4940,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 8011285,
-    "cost_usd": 2.570001,
+    "cost_usd": 2.540019,
     "call_count": 136,
     "estimated": false
   },
@@ -4870,7 +4970,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 10191794,
-    "cost_usd": 17.922519,
+    "cost_usd": 17.713427,
     "call_count": 113,
     "estimated": false
   },
@@ -4930,7 +5030,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 836242,
-    "cost_usd": 0.414524,
+    "cost_usd": 0.409688,
     "call_count": 38,
     "estimated": false
   },
@@ -4950,7 +5050,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 11458733,
-    "cost_usd": 20.438447,
+    "cost_usd": 20.200003,
     "call_count": 72,
     "estimated": false
   },
@@ -4980,7 +5080,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 835151,
-    "cost_usd": 0.416631,
+    "cost_usd": 0.41177,
     "call_count": 37,
     "estimated": false
   },
@@ -5000,7 +5100,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5783188,
-    "cost_usd": 12.668645,
+    "cost_usd": 12.520847,
     "call_count": 64,
     "estimated": false
   },
@@ -5030,7 +5130,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1060566,
-    "cost_usd": 0.269255,
+    "cost_usd": 0.266113,
     "call_count": 44,
     "estimated": false
   },
@@ -5050,7 +5150,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1067591,
-    "cost_usd": 1.488182,
+    "cost_usd": 1.47082,
     "call_count": 14,
     "estimated": false
   },
@@ -5100,7 +5200,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7523726,
-    "cost_usd": 19.754923,
+    "cost_usd": 19.524454,
     "call_count": 96,
     "estimated": false
   },
@@ -5110,7 +5210,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 2748531,
-    "cost_usd": 1.666241,
+    "cost_usd": 1.646802,
     "call_count": 48,
     "estimated": false
   },
@@ -5200,7 +5300,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 688234,
-    "cost_usd": 0.110792,
+    "cost_usd": 0.109499,
     "call_count": 1,
     "estimated": false
   },
@@ -5210,7 +5310,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 239635,
-    "cost_usd": 0.345843,
+    "cost_usd": 0.341809,
     "call_count": 5,
     "estimated": false
   },
@@ -5220,7 +5320,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6508910,
-    "cost_usd": 8.849651,
+    "cost_usd": 8.746407,
     "call_count": 82,
     "estimated": false
   },
@@ -5240,7 +5340,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 3317113,
-    "cost_usd": 1.077757,
+    "cost_usd": 1.065183,
     "call_count": 12,
     "estimated": false
   },
@@ -5270,7 +5370,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-haiku-4-5",
     "total_tokens": 19242536,
-    "cost_usd": 4.304259,
+    "cost_usd": 4.254044,
     "call_count": 301,
     "estimated": false
   },
@@ -5280,7 +5380,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 8601758,
-    "cost_usd": 12.296497,
+    "cost_usd": 12.153041,
     "call_count": 116,
     "estimated": false
   },
@@ -5310,7 +5410,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 2087868,
-    "cost_usd": 0.693983,
+    "cost_usd": 0.685887,
     "call_count": 19,
     "estimated": false
   },
@@ -5350,7 +5450,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 146204,
-    "cost_usd": 0.400308,
+    "cost_usd": 0.395638,
     "call_count": 0,
     "estimated": false
   },
@@ -5370,7 +5470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 171018,
-    "cost_usd": 0.415825,
+    "cost_usd": 0.410974,
     "call_count": 0,
     "estimated": false
   },
@@ -5400,7 +5500,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 146087,
-    "cost_usd": 0.398586,
+    "cost_usd": 0.393936,
     "call_count": 0,
     "estimated": false
   },
@@ -5420,7 +5520,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 164383,
-    "cost_usd": 0.408442,
+    "cost_usd": 0.403677,
     "call_count": 4,
     "estimated": false
   },
@@ -5450,7 +5550,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 190913,
-    "cost_usd": 0.694812,
+    "cost_usd": 0.686706,
     "call_count": 0,
     "estimated": false
   },
@@ -5470,7 +5570,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 190529,
-    "cost_usd": 0.689374,
+    "cost_usd": 0.681331,
     "call_count": 0,
     "estimated": false
   },
@@ -5500,7 +5600,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 190529,
-    "cost_usd": 0.689374,
+    "cost_usd": 0.681331,
     "call_count": 0,
     "estimated": false
   },
@@ -5520,7 +5620,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2211023,
-    "cost_usd": 2.944185,
+    "cost_usd": 2.909836,
     "call_count": 33,
     "estimated": false
   },
@@ -5550,7 +5650,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7173163,
-    "cost_usd": 9.876452,
+    "cost_usd": 9.761229,
     "call_count": 87,
     "estimated": false
   },
@@ -5580,7 +5680,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 49486548,
-    "cost_usd": 16.260034,
+    "cost_usd": 16.070338,
     "call_count": 0,
     "estimated": false
   },
@@ -5590,7 +5690,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 16050076,
-    "cost_usd": 36.507982,
+    "cost_usd": 36.082065,
     "call_count": 123,
     "estimated": false
   },
@@ -5620,7 +5720,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 2831508,
-    "cost_usd": 0.572012,
+    "cost_usd": 0.565338,
     "call_count": 2,
     "estimated": false
   },
@@ -5640,7 +5740,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2385669,
-    "cost_usd": 3.772598,
+    "cost_usd": 3.728585,
     "call_count": 33,
     "estimated": false
   },
@@ -5690,7 +5790,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2534163,
-    "cost_usd": 2.187022,
+    "cost_usd": 2.161508,
     "call_count": 44,
     "estimated": false
   },
@@ -5720,7 +5820,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2395718,
-    "cost_usd": 3.194079,
+    "cost_usd": 3.156815,
     "call_count": 43,
     "estimated": false
   },
@@ -5750,7 +5850,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1047417,
-    "cost_usd": 0.217073,
+    "cost_usd": 0.21454,
     "call_count": 31,
     "estimated": false
   },
@@ -5770,7 +5870,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 14812763,
-    "cost_usd": 20.824922,
+    "cost_usd": 20.58197,
     "call_count": 148,
     "estimated": false
   },
@@ -5800,7 +5900,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 5652132,
-    "cost_usd": 1.63186,
+    "cost_usd": 1.612822,
     "call_count": 41,
     "estimated": false
   },
@@ -5830,7 +5930,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 24847113,
-    "cost_usd": 39.08899,
+    "cost_usd": 38.632961,
     "call_count": 187,
     "estimated": false
   },
@@ -5850,7 +5950,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 3068594,
-    "cost_usd": 1.659781,
+    "cost_usd": 1.640418,
     "call_count": 29,
     "estimated": false
   },
@@ -5900,7 +6000,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 646061,
-    "cost_usd": 0.926374,
+    "cost_usd": 0.915566,
     "call_count": 8,
     "estimated": false
   },
@@ -6350,7 +6450,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1809109,
-    "cost_usd": 3.860449,
+    "cost_usd": 3.815411,
     "call_count": 6,
     "estimated": false
   },
@@ -6370,7 +6470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 856595,
-    "cost_usd": 0.15763,
+    "cost_usd": 0.155791,
     "call_count": 44,
     "estimated": false
   },
@@ -6400,7 +6500,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 680786,
-    "cost_usd": 2.413449,
+    "cost_usd": 2.385292,
     "call_count": 4,
     "estimated": false
   },
@@ -6420,7 +6520,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1158521,
-    "cost_usd": 5.064202,
+    "cost_usd": 5.005121,
     "call_count": 11,
     "estimated": false
   },
@@ -6430,7 +6530,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 796141,
-    "cost_usd": 0.171088,
+    "cost_usd": 0.169092,
     "call_count": 41,
     "estimated": false
   },
@@ -6460,7 +6560,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1212129,
-    "cost_usd": 4.45976,
+    "cost_usd": 4.407731,
     "call_count": 5,
     "estimated": false
   },
@@ -6470,7 +6570,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 836693,
-    "cost_usd": 0.155202,
+    "cost_usd": 0.153391,
     "call_count": 43,
     "estimated": false
   },
@@ -6510,7 +6610,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1306966,
-    "cost_usd": 3.964707,
+    "cost_usd": 3.918453,
     "call_count": 6,
     "estimated": false
   },
@@ -6520,7 +6620,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 816314,
-    "cost_usd": 0.151321,
+    "cost_usd": 0.149555,
     "call_count": 42,
     "estimated": false
   },
@@ -6550,7 +6650,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 871379,
-    "cost_usd": 2.836307,
+    "cost_usd": 2.803217,
     "call_count": 3,
     "estimated": false
   },
@@ -6560,7 +6660,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 876771,
-    "cost_usd": 0.16087,
+    "cost_usd": 0.158993,
     "call_count": 45,
     "estimated": false
   },
@@ -6600,7 +6700,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 838774,
-    "cost_usd": 0.15695,
+    "cost_usd": 0.155119,
     "call_count": 43,
     "estimated": false
   },
@@ -6630,7 +6730,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 869872,
-    "cost_usd": 2.833014,
+    "cost_usd": 2.799963,
     "call_count": 3,
     "estimated": false
   },
@@ -6640,7 +6740,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1702681,
-    "cost_usd": 6.254981,
+    "cost_usd": 6.182008,
     "call_count": 9,
     "estimated": false
   },
@@ -6650,7 +6750,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 115948,
-    "cost_usd": 0.042584,
+    "cost_usd": 0.042087,
     "call_count": 6,
     "estimated": false
   },
@@ -6700,7 +6800,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 577557,
-    "cost_usd": 1.764045,
+    "cost_usd": 1.743465,
     "call_count": 1,
     "estimated": false
   },
@@ -6730,7 +6830,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 398701,
-    "cost_usd": 0.925739,
+    "cost_usd": 0.914939,
     "call_count": 0,
     "estimated": false
   },
@@ -6750,7 +6850,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 719933,
-    "cost_usd": 2.573411,
+    "cost_usd": 2.543389,
     "call_count": 2,
     "estimated": false
   },
@@ -6770,7 +6870,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 854884,
-    "cost_usd": 2.792774,
+    "cost_usd": 2.760192,
     "call_count": 3,
     "estimated": false
   },
@@ -6790,7 +6890,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5139042,
-    "cost_usd": 14.486311,
+    "cost_usd": 14.317307,
     "call_count": 30,
     "estimated": false
   },
@@ -6800,7 +6900,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 6395867,
-    "cost_usd": 2.630053,
+    "cost_usd": 2.59937,
     "call_count": 69,
     "estimated": false
   },
@@ -6840,7 +6940,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 38084681,
-    "cost_usd": 81.216769,
+    "cost_usd": 80.26926,
     "call_count": 297,
     "estimated": false
   },
@@ -6870,7 +6970,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 20565842,
-    "cost_usd": 9.025274,
+    "cost_usd": 8.919981,
     "call_count": 86,
     "estimated": false
   },
@@ -6910,7 +7010,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 24778354,
-    "cost_usd": 32.677121,
+    "cost_usd": 32.295896,
     "call_count": 234,
     "estimated": false
   },
@@ -6930,7 +7030,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 5575566,
-    "cost_usd": 1.942297,
+    "cost_usd": 1.919637,
     "call_count": 57,
     "estimated": false
   },
@@ -7780,7 +7880,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 14596742,
-    "cost_usd": 31.1881,
+    "cost_usd": 30.824247,
     "call_count": 142,
     "estimated": false
   },
@@ -7790,7 +7890,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 877067,
-    "cost_usd": 0.803917,
+    "cost_usd": 0.794539,
     "call_count": 7,
     "estimated": false
   },
@@ -7810,7 +7910,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5709748,
-    "cost_usd": 18.077621,
+    "cost_usd": 17.86672,
     "call_count": 74,
     "estimated": false
   },
@@ -7860,7 +7960,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 10732453,
-    "cost_usd": 22.995656,
+    "cost_usd": 22.727379,
     "call_count": 92,
     "estimated": false
   },
@@ -7870,7 +7970,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 2659736,
-    "cost_usd": 0.824111,
+    "cost_usd": 0.814497,
     "call_count": 28,
     "estimated": false
   },
@@ -7910,7 +8010,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 15983751,
-    "cost_usd": 37.752074,
+    "cost_usd": 37.311642,
     "call_count": 148,
     "estimated": false
   },
@@ -7940,7 +8040,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1310969,
-    "cost_usd": 1.134285,
+    "cost_usd": 1.121052,
     "call_count": 11,
     "estimated": false
   },
@@ -7960,7 +8060,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6658122,
-    "cost_usd": 15.13248,
+    "cost_usd": 14.955938,
     "call_count": 29,
     "estimated": false
   },
@@ -7990,7 +8090,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 804063,
-    "cost_usd": 0.232926,
+    "cost_usd": 0.230209,
     "call_count": 0,
     "estimated": false
   },
@@ -8000,7 +8100,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1765812,
-    "cost_usd": 0.379677,
+    "cost_usd": 0.375247,
     "call_count": 26,
     "estimated": false
   },
@@ -8020,7 +8120,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 10820816,
-    "cost_usd": 24.382869,
+    "cost_usd": 24.098408,
     "call_count": 63,
     "estimated": false
   },
@@ -8040,7 +8140,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4085654,
-    "cost_usd": 11.116511,
+    "cost_usd": 10.986821,
     "call_count": 25,
     "estimated": false
   },
@@ -8060,7 +8160,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4325666,
-    "cost_usd": 10.339138,
+    "cost_usd": 10.218517,
     "call_count": 30,
     "estimated": false
   },
@@ -8080,7 +8180,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4701564,
-    "cost_usd": 6.987859,
+    "cost_usd": 6.906335,
     "call_count": 22,
     "estimated": false
   },
@@ -8110,7 +8210,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 310856,
-    "cost_usd": 1.12573,
+    "cost_usd": 1.112597,
     "call_count": 0,
     "estimated": false
   },
@@ -8130,7 +8230,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 310855,
-    "cost_usd": 1.125723,
+    "cost_usd": 1.11259,
     "call_count": 0,
     "estimated": false
   },
@@ -8140,7 +8240,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 232778,
-    "cost_usd": 1.076046,
+    "cost_usd": 1.063492,
     "call_count": 0,
     "estimated": false
   },
@@ -8150,7 +8250,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 553846,
-    "cost_usd": 1.29775,
+    "cost_usd": 1.282609,
     "call_count": 16,
     "estimated": false
   },
@@ -8180,7 +8280,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 176760,
-    "cost_usd": 0.642367,
+    "cost_usd": 0.634873,
     "call_count": 0,
     "estimated": false
   },
@@ -8200,7 +8300,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 176725,
-    "cost_usd": 0.641739,
+    "cost_usd": 0.634252,
     "call_count": 0,
     "estimated": false
   },
@@ -8210,7 +8310,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 176961,
-    "cost_usd": 0.644312,
+    "cost_usd": 0.636796,
     "call_count": 0,
     "estimated": false
   },
@@ -8230,7 +8330,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 177181,
-    "cost_usd": 0.646721,
+    "cost_usd": 0.639176,
     "call_count": 0,
     "estimated": false
   },
@@ -8240,7 +8340,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 177178,
-    "cost_usd": 0.646641,
+    "cost_usd": 0.639097,
     "call_count": 0,
     "estimated": false
   },
@@ -8260,7 +8360,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 177248,
-    "cost_usd": 0.648236,
+    "cost_usd": 0.640674,
     "call_count": 0,
     "estimated": false
   },
@@ -8270,7 +8370,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9751092,
-    "cost_usd": 19.364339,
+    "cost_usd": 19.138427,
     "call_count": 66,
     "estimated": false
   },
@@ -8290,7 +8390,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1785492,
-    "cost_usd": 0.392341,
+    "cost_usd": 0.387764,
     "call_count": 0,
     "estimated": false
   },
@@ -8310,7 +8410,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 11562688,
-    "cost_usd": 20.688312,
+    "cost_usd": 20.446954,
     "call_count": 71,
     "estimated": false
   },
@@ -8320,7 +8420,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 121922,
-    "cost_usd": 0.161495,
+    "cost_usd": 0.159611,
     "call_count": 1,
     "estimated": false
   },
@@ -8340,7 +8440,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 15326003,
-    "cost_usd": 33.780475,
+    "cost_usd": 33.386378,
     "call_count": 0,
     "estimated": false
   },
@@ -8350,7 +8450,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 3437204,
-    "cost_usd": 1.701012,
+    "cost_usd": 1.681167,
     "call_count": 0,
     "estimated": false
   },
@@ -8370,7 +8470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2232024,
-    "cost_usd": 6.779397,
+    "cost_usd": 6.700306,
     "call_count": 0,
     "estimated": false
   },
@@ -8380,7 +8480,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1680952,
-    "cost_usd": 1.115128,
+    "cost_usd": 1.102118,
     "call_count": 0,
     "estimated": false
   },
@@ -8390,7 +8490,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3022711,
-    "cost_usd": 8.268204,
+    "cost_usd": 8.171744,
     "call_count": 4,
     "estimated": false
   },
@@ -8400,7 +8500,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 170050,
-    "cost_usd": 0.226162,
+    "cost_usd": 0.223524,
     "call_count": 0,
     "estimated": false
   },
@@ -8410,7 +8510,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 20128608,
-    "cost_usd": 24.552902,
+    "cost_usd": 24.266457,
     "call_count": 79,
     "estimated": false
   },
@@ -8430,7 +8530,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 14287836,
-    "cost_usd": 6.91355,
+    "cost_usd": 6.832893,
     "call_count": 15,
     "estimated": false
   },
@@ -8450,7 +8550,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6646754,
-    "cost_usd": 7.364156,
+    "cost_usd": 7.278242,
     "call_count": 61,
     "estimated": false
   },
@@ -8480,7 +8580,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2708691,
-    "cost_usd": 4.359655,
+    "cost_usd": 4.308793,
     "call_count": 58,
     "estimated": false
   },
@@ -8500,7 +8600,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 964915,
-    "cost_usd": 1.906232,
+    "cost_usd": 1.883993,
     "call_count": 10,
     "estimated": false
   },
@@ -8510,7 +8610,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 12437081,
-    "cost_usd": 28.299024,
+    "cost_usd": 27.968875,
     "call_count": 93,
     "estimated": false
   },
@@ -8520,7 +8620,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 2921736,
-    "cost_usd": 2.464922,
+    "cost_usd": 2.436165,
     "call_count": 21,
     "estimated": false
   },
@@ -8580,7 +8680,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4276522,
-    "cost_usd": 8.970288,
+    "cost_usd": 8.865637,
     "call_count": 52,
     "estimated": false
   },
@@ -8630,7 +8730,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 187857,
-    "cost_usd": 0.300182,
+    "cost_usd": 0.29668,
     "call_count": 2,
     "estimated": false
   },
@@ -8650,7 +8750,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 241205,
-    "cost_usd": 0.351334,
+    "cost_usd": 0.347235,
     "call_count": 3,
     "estimated": false
   },
@@ -8660,7 +8760,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4740838,
-    "cost_usd": 7.283885,
+    "cost_usd": 7.198908,
     "call_count": 62,
     "estimated": false
   },
@@ -8690,7 +8790,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 359159,
-    "cost_usd": 0.657061,
+    "cost_usd": 0.649395,
     "call_count": 4,
     "estimated": false
   },
@@ -8700,7 +8800,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 60190,
-    "cost_usd": 0.045023,
+    "cost_usd": 0.044498,
     "call_count": 2,
     "estimated": false
   },
@@ -8710,7 +8810,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 535708,
-    "cost_usd": 1.113531,
+    "cost_usd": 1.10054,
     "call_count": 7,
     "estimated": false
   },
@@ -8720,7 +8820,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1285046,
-    "cost_usd": 1.446236,
+    "cost_usd": 1.429363,
     "call_count": 4,
     "estimated": false
   },
@@ -8730,7 +8830,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 98440,
-    "cost_usd": 0.368571,
+    "cost_usd": 0.364271,
     "call_count": 0,
     "estimated": false
   },
@@ -8740,7 +8840,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 98322,
-    "cost_usd": 0.365527,
+    "cost_usd": 0.361263,
     "call_count": 0,
     "estimated": false
   },
@@ -8750,7 +8850,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 138579,
-    "cost_usd": 0.400385,
+    "cost_usd": 0.395714,
     "call_count": 5,
     "estimated": false
   },
@@ -8760,7 +8860,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 123977,
-    "cost_usd": 0.458636,
+    "cost_usd": 0.453285,
     "call_count": 0,
     "estimated": false
   },
@@ -8770,7 +8870,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 218722,
-    "cost_usd": 0.518075,
+    "cost_usd": 0.512031,
     "call_count": 0,
     "estimated": false
   },
@@ -8780,7 +8880,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 123948,
-    "cost_usd": 0.458106,
+    "cost_usd": 0.452762,
     "call_count": 0,
     "estimated": false
   },
@@ -8790,7 +8890,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 218669,
-    "cost_usd": 0.517521,
+    "cost_usd": 0.511483,
     "call_count": 0,
     "estimated": false
   },
@@ -8800,7 +8900,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 123911,
-    "cost_usd": 0.457365,
+    "cost_usd": 0.452029,
     "call_count": 0,
     "estimated": false
   },
@@ -8810,7 +8910,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 218741,
-    "cost_usd": 0.519744,
+    "cost_usd": 0.51368,
     "call_count": 0,
     "estimated": false
   },
@@ -8820,7 +8920,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 300558,
-    "cost_usd": 0.571345,
+    "cost_usd": 0.564679,
     "call_count": 8,
     "estimated": false
   },
@@ -8850,7 +8950,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4620988,
-    "cost_usd": 9.059155,
+    "cost_usd": 8.953467,
     "call_count": 26,
     "estimated": false
   },
@@ -8870,7 +8970,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 803702,
-    "cost_usd": 0.540961,
+    "cost_usd": 0.53465,
     "call_count": 3,
     "estimated": false
   },
@@ -8880,7 +8980,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9676060,
-    "cost_usd": 10.93075,
+    "cost_usd": 10.803227,
     "call_count": 86,
     "estimated": false
   },
@@ -8890,7 +8990,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 106572,
-    "cost_usd": 0.145402,
+    "cost_usd": 0.143706,
     "call_count": 1,
     "estimated": false
   },
@@ -8900,7 +9000,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 12433085,
-    "cost_usd": 20.641631,
+    "cost_usd": 20.400816,
     "call_count": 54,
     "estimated": false
   },
@@ -8920,7 +9020,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6631002,
-    "cost_usd": 9.580895,
+    "cost_usd": 9.469121,
     "call_count": 88,
     "estimated": false
   },
@@ -8960,7 +9060,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 184656,
-    "cost_usd": 0.494748,
+    "cost_usd": 0.488976,
     "call_count": 0,
     "estimated": false
   },
@@ -8980,7 +9080,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 482439,
-    "cost_usd": 1.586362,
+    "cost_usd": 1.567855,
     "call_count": 0,
     "estimated": false
   },
@@ -9000,7 +9100,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6504220,
-    "cost_usd": 9.641721,
+    "cost_usd": 9.529237,
     "call_count": 8,
     "estimated": false
   },
@@ -9010,7 +9110,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 3278362,
-    "cost_usd": 0.53722,
+    "cost_usd": 0.530952,
     "call_count": 0,
     "estimated": false
   },
@@ -9030,7 +9130,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3380238,
-    "cost_usd": 5.430735,
+    "cost_usd": 5.367378,
     "call_count": 0,
     "estimated": false
   },
@@ -9040,7 +9140,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 509713,
-    "cost_usd": 0.466988,
+    "cost_usd": 0.46154,
     "call_count": 0,
     "estimated": false
   },
@@ -9050,7 +9150,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2561864,
-    "cost_usd": 6.714849,
+    "cost_usd": 6.636511,
     "call_count": 26,
     "estimated": false
   },
@@ -9070,7 +9170,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1043064,
-    "cost_usd": 0.65393,
+    "cost_usd": 0.646301,
     "call_count": 0,
     "estimated": false
   },
@@ -9080,7 +9180,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 213613,
-    "cost_usd": 0.75714,
+    "cost_usd": 0.748307,
     "call_count": 0,
     "estimated": false
   },
@@ -9090,7 +9190,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 63968,
-    "cost_usd": 0.18188,
+    "cost_usd": 0.179758,
     "call_count": 0,
     "estimated": false
   },
@@ -9100,7 +9200,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 39420,
-    "cost_usd": 0.144889,
+    "cost_usd": 0.143199,
     "call_count": 0,
     "estimated": false
   },
@@ -9110,7 +9210,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 63023,
-    "cost_usd": 0.181972,
+    "cost_usd": 0.179849,
     "call_count": 0,
     "estimated": false
   },
@@ -9120,7 +9220,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 60876,
-    "cost_usd": 0.031269,
+    "cost_usd": 0.030905,
     "call_count": 0,
     "estimated": false
   },
@@ -9130,7 +9230,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 99174,
-    "cost_usd": 0.298864,
+    "cost_usd": 0.295377,
     "call_count": 0,
     "estimated": false
   },
@@ -9140,7 +9240,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 117572,
-    "cost_usd": 0.31037,
+    "cost_usd": 0.306749,
     "call_count": 0,
     "estimated": false
   },
@@ -9150,7 +9250,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 122124,
-    "cost_usd": 0.808373,
+    "cost_usd": 0.798942,
     "call_count": 0,
     "estimated": false
   },
@@ -9160,7 +9260,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 121804,
-    "cost_usd": 0.806255,
+    "cost_usd": 0.796849,
     "call_count": 0,
     "estimated": false
   },
@@ -9170,7 +9270,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 121484,
-    "cost_usd": 0.804138,
+    "cost_usd": 0.794757,
     "call_count": 0,
     "estimated": false
   },
@@ -9180,7 +9280,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 121164,
-    "cost_usd": 0.802021,
+    "cost_usd": 0.792664,
     "call_count": 0,
     "estimated": false
   },
@@ -9190,7 +9290,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 120844,
-    "cost_usd": 0.800221,
+    "cost_usd": 0.790886,
     "call_count": 0,
     "estimated": false
   },
@@ -9200,7 +9300,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 120492,
-    "cost_usd": 0.797574,
+    "cost_usd": 0.788269,
     "call_count": 0,
     "estimated": false
   },
@@ -9210,7 +9310,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 253606,
-    "cost_usd": 1.046603,
+    "cost_usd": 1.034393,
     "call_count": 0,
     "estimated": false
   },
@@ -9220,7 +9320,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 139659,
-    "cost_usd": 0.926021,
+    "cost_usd": 0.915218,
     "call_count": 0,
     "estimated": false
   },
@@ -9230,7 +9330,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 119532,
-    "cost_usd": 0.791222,
+    "cost_usd": 0.781992,
     "call_count": 0,
     "estimated": false
   },
@@ -9240,7 +9340,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 119212,
-    "cost_usd": 0.789105,
+    "cost_usd": 0.779899,
     "call_count": 0,
     "estimated": false
   },
@@ -9250,7 +9350,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 118892,
-    "cost_usd": 0.786988,
+    "cost_usd": 0.777806,
     "call_count": 0,
     "estimated": false
   },
@@ -9260,7 +9360,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1274503,
-    "cost_usd": 3.577764,
+    "cost_usd": 3.536024,
     "call_count": 18,
     "estimated": false
   },
@@ -9290,7 +9390,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 384086,
-    "cost_usd": 1.246239,
+    "cost_usd": 1.2317,
     "call_count": 10,
     "estimated": false
   },
@@ -9300,7 +9400,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 71802,
-    "cost_usd": 0.475405,
+    "cost_usd": 0.469859,
     "call_count": 0,
     "estimated": false
   },
@@ -9310,7 +9410,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 71482,
-    "cost_usd": 0.473288,
+    "cost_usd": 0.467766,
     "call_count": 0,
     "estimated": false
   },
@@ -9320,7 +9420,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 247141,
-    "cost_usd": 0.576319,
+    "cost_usd": 0.569595,
     "call_count": 0,
     "estimated": false
   },
@@ -9330,7 +9430,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 69154,
-    "cost_usd": 0.457884,
+    "cost_usd": 0.452542,
     "call_count": 0,
     "estimated": false
   },
@@ -9340,7 +9440,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 68834,
-    "cost_usd": 0.455767,
+    "cost_usd": 0.450449,
     "call_count": 0,
     "estimated": false
   },
@@ -9350,7 +9450,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 819582,
-    "cost_usd": 2.926496,
+    "cost_usd": 2.892354,
     "call_count": 0,
     "estimated": false
   },
@@ -9360,7 +9460,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 250024,
-    "cost_usd": 0.557047,
+    "cost_usd": 0.550548,
     "call_count": 0,
     "estimated": false
   },
@@ -9370,7 +9470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 40004,
-    "cost_usd": 0.265343,
+    "cost_usd": 0.262248,
     "call_count": 0,
     "estimated": false
   },
@@ -9380,7 +9480,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 39650,
-    "cost_usd": 0.263001,
+    "cost_usd": 0.259933,
     "call_count": 0,
     "estimated": false
   },
@@ -9390,7 +9490,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 39296,
-    "cost_usd": 0.260659,
+    "cost_usd": 0.257618,
     "call_count": 0,
     "estimated": false
   },
@@ -9400,7 +9500,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 38934,
-    "cost_usd": 0.258859,
+    "cost_usd": 0.255839,
     "call_count": 0,
     "estimated": false
   },
@@ -9410,7 +9510,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 95224,
-    "cost_usd": 0.630382,
+    "cost_usd": 0.623028,
     "call_count": 0,
     "estimated": false
   },
@@ -9420,7 +9520,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 94904,
-    "cost_usd": 0.628265,
+    "cost_usd": 0.620935,
     "call_count": 0,
     "estimated": false
   },
@@ -9430,7 +9530,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 94584,
-    "cost_usd": 0.626148,
+    "cost_usd": 0.618843,
     "call_count": 0,
     "estimated": false
   },
@@ -9440,7 +9540,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 94264,
-    "cost_usd": 0.624031,
+    "cost_usd": 0.61675,
     "call_count": 0,
     "estimated": false
   },
@@ -9450,7 +9550,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 93944,
-    "cost_usd": 0.621913,
+    "cost_usd": 0.614658,
     "call_count": 0,
     "estimated": false
   },
@@ -9460,7 +9560,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 93624,
-    "cost_usd": 0.619796,
+    "cost_usd": 0.612565,
     "call_count": 0,
     "estimated": false
   },
@@ -9470,7 +9570,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 93304,
-    "cost_usd": 0.617678,
+    "cost_usd": 0.610472,
     "call_count": 0,
     "estimated": false
   },
@@ -9480,7 +9580,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 92984,
-    "cost_usd": 0.615561,
+    "cost_usd": 0.60838,
     "call_count": 0,
     "estimated": false
   },
@@ -9490,7 +9590,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 92664,
-    "cost_usd": 0.613444,
+    "cost_usd": 0.606287,
     "call_count": 0,
     "estimated": false
   },
@@ -9500,7 +9600,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 111826,
-    "cost_usd": 0.740507,
+    "cost_usd": 0.731868,
     "call_count": 0,
     "estimated": false
   },
@@ -9510,7 +9610,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 248187,
-    "cost_usd": 0.821468,
+    "cost_usd": 0.811884,
     "call_count": 0,
     "estimated": false
   },
@@ -9520,7 +9620,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 44925,
-    "cost_usd": 0.297412,
+    "cost_usd": 0.293942,
     "call_count": 0,
     "estimated": false
   },
@@ -9530,7 +9630,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 44685,
-    "cost_usd": 0.295824,
+    "cost_usd": 0.292373,
     "call_count": 0,
     "estimated": false
   },
@@ -9540,7 +9640,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9516924,
-    "cost_usd": 16.667139,
+    "cost_usd": 16.472693,
     "call_count": 0,
     "estimated": false
   },
@@ -9560,7 +9660,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 13947628,
-    "cost_usd": 27.718429,
+    "cost_usd": 27.395054,
     "call_count": 52,
     "estimated": false
   },
@@ -9590,7 +9690,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 81958,
-    "cost_usd": 0.542605,
+    "cost_usd": 0.536274,
     "call_count": 0,
     "estimated": false
   },
@@ -9600,7 +9700,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1152885,
-    "cost_usd": 3.389932,
+    "cost_usd": 3.350384,
     "call_count": 0,
     "estimated": false
   },
@@ -9610,7 +9710,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 120288,
-    "cost_usd": 0.554627,
+    "cost_usd": 0.548157,
     "call_count": 0,
     "estimated": false
   },
@@ -9620,7 +9720,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6207927,
-    "cost_usd": 9.100406,
+    "cost_usd": 8.994237,
     "call_count": 0,
     "estimated": false
   },
@@ -9630,7 +9730,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1081887,
-    "cost_usd": 2.697857,
+    "cost_usd": 2.666382,
     "call_count": 0,
     "estimated": false
   },
@@ -9640,7 +9740,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 40576,
-    "cost_usd": 0.268791,
+    "cost_usd": 0.265655,
     "call_count": 0,
     "estimated": false
   },
@@ -9650,7 +9750,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 40256,
-    "cost_usd": 0.266673,
+    "cost_usd": 0.263562,
     "call_count": 0,
     "estimated": false
   },
@@ -9660,7 +9760,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 39936,
-    "cost_usd": 0.264735,
+    "cost_usd": 0.261646,
     "call_count": 0,
     "estimated": false
   },
@@ -9670,7 +9770,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 78509,
-    "cost_usd": 0.2869,
+    "cost_usd": 0.283552,
     "call_count": 0,
     "estimated": false
   },
@@ -9680,7 +9780,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 138663,
-    "cost_usd": 0.63715,
+    "cost_usd": 0.629717,
     "call_count": 0,
     "estimated": false
   },
@@ -9690,7 +9790,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 92042,
-    "cost_usd": 0.609328,
+    "cost_usd": 0.602219,
     "call_count": 0,
     "estimated": false
   },
@@ -9700,7 +9800,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 91722,
-    "cost_usd": 0.607211,
+    "cost_usd": 0.600127,
     "call_count": 0,
     "estimated": false
   },
@@ -9710,7 +9810,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 91402,
-    "cost_usd": 0.605093,
+    "cost_usd": 0.598034,
     "call_count": 0,
     "estimated": false
   },
@@ -9720,7 +9820,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 91082,
-    "cost_usd": 0.602976,
+    "cost_usd": 0.595941,
     "call_count": 0,
     "estimated": false
   },
@@ -9730,7 +9830,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 90762,
-    "cost_usd": 0.600859,
+    "cost_usd": 0.593849,
     "call_count": 0,
     "estimated": false
   },
@@ -9740,7 +9840,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 447787,
-    "cost_usd": 1.356859,
+    "cost_usd": 1.34103,
     "call_count": 0,
     "estimated": false
   },
@@ -9750,7 +9850,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 84727,
-    "cost_usd": 0.040985,
+    "cost_usd": 0.040506,
     "call_count": 0,
     "estimated": false
   },
@@ -9760,7 +9860,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 978004,
-    "cost_usd": 2.354289,
+    "cost_usd": 2.326822,
     "call_count": 0,
     "estimated": false
   },
@@ -9770,7 +9870,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1996232,
-    "cost_usd": 0.450826,
+    "cost_usd": 0.445567,
     "call_count": 0,
     "estimated": false
   },
@@ -9780,7 +9880,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 789907,
-    "cost_usd": 2.391215,
+    "cost_usd": 2.363318,
     "call_count": 0,
     "estimated": false
   },
@@ -9790,7 +9890,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 2251636,
-    "cost_usd": 0.580613,
+    "cost_usd": 0.57384,
     "call_count": 0,
     "estimated": false
   },
@@ -9800,7 +9900,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 84404,
-    "cost_usd": 0.558789,
+    "cost_usd": 0.55227,
     "call_count": 0,
     "estimated": false
   },
@@ -9810,7 +9910,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 84084,
-    "cost_usd": 0.556672,
+    "cost_usd": 0.550177,
     "call_count": 0,
     "estimated": false
   },
@@ -9820,7 +9920,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 172750,
-    "cost_usd": 0.928598,
+    "cost_usd": 0.917764,
     "call_count": 0,
     "estimated": false
   },
@@ -9830,7 +9930,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 282860,
-    "cost_usd": 0.695447,
+    "cost_usd": 0.687334,
     "call_count": 0,
     "estimated": false
   },
@@ -9840,7 +9940,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 73950,
-    "cost_usd": 0.489618,
+    "cost_usd": 0.483906,
     "call_count": 0,
     "estimated": false
   },
@@ -9850,7 +9950,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 575947,
-    "cost_usd": 1.301752,
+    "cost_usd": 1.286565,
     "call_count": 0,
     "estimated": false
   },
@@ -9860,7 +9960,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2470138,
-    "cost_usd": 3.099366,
+    "cost_usd": 3.063208,
     "call_count": 0,
     "estimated": false
   },
@@ -9870,7 +9970,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 5934551,
-    "cost_usd": 9.484582,
+    "cost_usd": 9.373931,
     "call_count": 0,
     "estimated": false
   },
@@ -9880,7 +9980,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 271309,
-    "cost_usd": 0.587038,
+    "cost_usd": 0.58019,
     "call_count": 0,
     "estimated": false
   },
@@ -9890,7 +9990,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 520481,
-    "cost_usd": 0.146243,
+    "cost_usd": 0.144537,
     "call_count": 0,
     "estimated": false
   },
@@ -9900,7 +10000,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 96159,
-    "cost_usd": 0.44496,
+    "cost_usd": 0.439769,
     "call_count": 0,
     "estimated": false
   },
@@ -9910,7 +10010,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 276304,
-    "cost_usd": 0.515213,
+    "cost_usd": 0.509202,
     "call_count": 0,
     "estimated": false
   },
@@ -9920,7 +10020,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 40550,
-    "cost_usd": 0.268619,
+    "cost_usd": 0.265485,
     "call_count": 0,
     "estimated": false
   },
@@ -9930,7 +10030,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 60225,
-    "cost_usd": 0.277307,
+    "cost_usd": 0.274072,
     "call_count": 0,
     "estimated": false
   },
@@ -9940,7 +10040,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 39750,
-    "cost_usd": 0.263325,
+    "cost_usd": 0.260253,
     "call_count": 0,
     "estimated": false
   },
@@ -9950,7 +10050,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 78289,
-    "cost_usd": 0.287494,
+    "cost_usd": 0.28414,
     "call_count": 0,
     "estimated": false
   },
@@ -9960,7 +10060,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 198426,
-    "cost_usd": 0.911319,
+    "cost_usd": 0.900688,
     "call_count": 0,
     "estimated": false
   },
@@ -9970,7 +10070,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 197706,
-    "cost_usd": 0.908016,
+    "cost_usd": 0.897423,
     "call_count": 0,
     "estimated": false
   },
@@ -9980,7 +10080,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 131404,
-    "cost_usd": 0.869776,
+    "cost_usd": 0.859629,
     "call_count": 0,
     "estimated": false
   },
@@ -9990,7 +10090,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 196506,
-    "cost_usd": 0.902511,
+    "cost_usd": 0.891982,
     "call_count": 0,
     "estimated": false
   },
@@ -10000,7 +10100,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 130604,
-    "cost_usd": 0.864483,
+    "cost_usd": 0.854397,
     "call_count": 0,
     "estimated": false
   },
@@ -10010,7 +10110,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 260248,
-    "cost_usd": 0.931117,
+    "cost_usd": 0.920255,
     "call_count": 0,
     "estimated": false
   },
@@ -10020,7 +10120,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 129644,
-    "cost_usd": 0.858131,
+    "cost_usd": 0.848119,
     "call_count": 0,
     "estimated": false
   },
@@ -10030,7 +10130,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 193866,
-    "cost_usd": 0.8904,
+    "cost_usd": 0.880012,
     "call_count": 0,
     "estimated": false
   },
@@ -10040,7 +10140,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 193096,
-    "cost_usd": 0.888266,
+    "cost_usd": 0.877903,
     "call_count": 0,
     "estimated": false
   },
@@ -10050,7 +10150,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2899523,
-    "cost_usd": 6.802292,
+    "cost_usd": 6.722934,
     "call_count": 0,
     "estimated": false
   },
@@ -10060,7 +10160,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 160061,
-    "cost_usd": 0.709435,
+    "cost_usd": 0.701158,
     "call_count": 0,
     "estimated": false
   },
@@ -10070,7 +10170,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 49614,
-    "cost_usd": 0.328438,
+    "cost_usd": 0.324606,
     "call_count": 0,
     "estimated": false
   },
@@ -10080,7 +10180,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 148362,
-    "cost_usd": 0.681645,
+    "cost_usd": 0.673693,
     "call_count": 0,
     "estimated": false
   },
@@ -10090,7 +10190,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 98508,
-    "cost_usd": 0.652112,
+    "cost_usd": 0.644504,
     "call_count": 0,
     "estimated": false
   },
@@ -10120,7 +10220,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1320379,
-    "cost_usd": 3.370849,
+    "cost_usd": 3.331523,
     "call_count": 22,
     "estimated": false
   },
@@ -10130,7 +10230,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 8487215,
-    "cost_usd": 20.211335,
+    "cost_usd": 19.975541,
     "call_count": 0,
     "estimated": false
   },
@@ -10140,7 +10240,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6199827,
-    "cost_usd": 11.424406,
+    "cost_usd": 11.291124,
     "call_count": 0,
     "estimated": false
   },
@@ -10150,7 +10250,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9375655,
-    "cost_usd": 19.026811,
+    "cost_usd": 18.804836,
     "call_count": 1,
     "estimated": false
   },
@@ -10160,7 +10260,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 8616449,
-    "cost_usd": 14.793274,
+    "cost_usd": 14.620689,
     "call_count": 0,
     "estimated": false
   },
@@ -10170,7 +10270,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 738811,
-    "cost_usd": 1.872557,
+    "cost_usd": 1.850711,
     "call_count": 0,
     "estimated": false
   },
@@ -10180,7 +10280,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 235007,
-    "cost_usd": 0.551493,
+    "cost_usd": 0.545059,
     "call_count": 0,
     "estimated": false
   },
@@ -10190,7 +10290,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 65080,
-    "cost_usd": 0.430928,
+    "cost_usd": 0.4259,
     "call_count": 0,
     "estimated": false
   },
@@ -10200,7 +10300,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 159386,
-    "cost_usd": 0.494992,
+    "cost_usd": 0.489218,
     "call_count": 0,
     "estimated": false
   },
@@ -10210,7 +10310,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 233527,
-    "cost_usd": 0.689802,
+    "cost_usd": 0.681754,
     "call_count": 0,
     "estimated": false
   },
@@ -10220,7 +10320,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 526145,
-    "cost_usd": 0.160992,
+    "cost_usd": 0.159113,
     "call_count": 0,
     "estimated": false
   },
@@ -10230,7 +10330,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 174085,
-    "cost_usd": 0.454831,
+    "cost_usd": 0.449525,
     "call_count": 0,
     "estimated": false
   },
@@ -10240,7 +10340,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 37009,
-    "cost_usd": 0.245784,
+    "cost_usd": 0.242917,
     "call_count": 0,
     "estimated": false
   },
@@ -10250,7 +10350,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 36629,
-    "cost_usd": 0.24327,
+    "cost_usd": 0.240432,
     "call_count": 0,
     "estimated": false
   },
@@ -10260,7 +10360,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 36249,
-    "cost_usd": 0.240756,
+    "cost_usd": 0.237947,
     "call_count": 0,
     "estimated": false
   },
@@ -10270,7 +10370,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 53660,
-    "cost_usd": 0.248627,
+    "cost_usd": 0.245726,
     "call_count": 0,
     "estimated": false
   },
@@ -10280,7 +10380,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 71018,
-    "cost_usd": 0.470218,
+    "cost_usd": 0.464732,
     "call_count": 0,
     "estimated": false
   },
@@ -10290,7 +10390,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 13089,
-    "cost_usd": 0.017741,
+    "cost_usd": 0.017534,
     "call_count": 0,
     "estimated": false
   },
@@ -10300,7 +10400,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 70698,
-    "cost_usd": 0.4681,
+    "cost_usd": 0.462639,
     "call_count": 0,
     "estimated": false
   },
@@ -10310,7 +10410,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 70378,
-    "cost_usd": 0.465983,
+    "cost_usd": 0.460547,
     "call_count": 0,
     "estimated": false
   },
@@ -10320,7 +10420,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 70058,
-    "cost_usd": 0.463865,
+    "cost_usd": 0.458454,
     "call_count": 0,
     "estimated": false
   },
@@ -10330,7 +10430,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 69738,
-    "cost_usd": 0.461748,
+    "cost_usd": 0.456361,
     "call_count": 0,
     "estimated": false
   },
@@ -10340,7 +10440,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3492775,
-    "cost_usd": 9.78746,
+    "cost_usd": 9.673275,
     "call_count": 0,
     "estimated": false
   },
@@ -10350,7 +10450,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 69026,
-    "cost_usd": 0.457037,
+    "cost_usd": 0.451705,
     "call_count": 0,
     "estimated": false
   },
@@ -10370,7 +10470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 8346143,
-    "cost_usd": 17.507692,
+    "cost_usd": 17.30344,
     "call_count": 20,
     "estimated": false
   },
@@ -10390,7 +10490,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2915022,
-    "cost_usd": 3.818029,
+    "cost_usd": 3.773486,
     "call_count": 0,
     "estimated": false
   },
@@ -10400,7 +10500,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2612863,
-    "cost_usd": 5.38872,
+    "cost_usd": 5.325853,
     "call_count": 0,
     "estimated": false
   },
@@ -10410,7 +10510,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 978185,
-    "cost_usd": 0.474996,
+    "cost_usd": 0.469454,
     "call_count": 0,
     "estimated": false
   },
@@ -10420,7 +10520,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7260951,
-    "cost_usd": 7.144929,
+    "cost_usd": 7.061573,
     "call_count": 0,
     "estimated": false
   },
@@ -10430,7 +10530,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7049374,
-    "cost_usd": 12.314992,
+    "cost_usd": 12.17132,
     "call_count": 0,
     "estimated": false
   },
@@ -10440,7 +10540,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 871629,
-    "cost_usd": 0.182971,
+    "cost_usd": 0.180837,
     "call_count": 0,
     "estimated": false
   },
@@ -10450,7 +10550,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 349186,
-    "cost_usd": 0.452328,
+    "cost_usd": 0.447051,
     "call_count": 0,
     "estimated": false
   },
@@ -10460,7 +10560,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2399252,
-    "cost_usd": 2.236735,
+    "cost_usd": 2.210641,
     "call_count": 0,
     "estimated": false
   },
@@ -10470,7 +10570,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 3595163,
-    "cost_usd": 0.718609,
+    "cost_usd": 0.710225,
     "call_count": 0,
     "estimated": false
   },
@@ -10480,7 +10580,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3498009,
-    "cost_usd": 3.442697,
+    "cost_usd": 3.402533,
     "call_count": 0,
     "estimated": false
   },
@@ -10490,7 +10590,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 17613562,
-    "cost_usd": 30.931616,
+    "cost_usd": 30.570755,
     "call_count": 0,
     "estimated": false
   },
@@ -10500,7 +10600,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 8540554,
-    "cost_usd": 17.659799,
+    "cost_usd": 17.453772,
     "call_count": 0,
     "estimated": false
   },
@@ -10510,7 +10610,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1462048,
-    "cost_usd": 3.590021,
+    "cost_usd": 3.548139,
     "call_count": 0,
     "estimated": false
   },
@@ -10520,7 +10620,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3314631,
-    "cost_usd": 7.538407,
+    "cost_usd": 7.450461,
     "call_count": 0,
     "estimated": false
   },
@@ -10530,7 +10630,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 381936,
-    "cost_usd": 1.047384,
+    "cost_usd": 1.035164,
     "call_count": 0,
     "estimated": false
   },
@@ -10540,7 +10640,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 469045,
-    "cost_usd": 2.284536,
+    "cost_usd": 2.257884,
     "call_count": 0,
     "estimated": false
   },
@@ -10550,7 +10650,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 751188,
-    "cost_usd": 2.934241,
+    "cost_usd": 2.900009,
     "call_count": 0,
     "estimated": false
   },
@@ -10560,7 +10660,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 885701,
-    "cost_usd": 3.200429,
+    "cost_usd": 3.163092,
     "call_count": 0,
     "estimated": false
   },
@@ -10570,7 +10670,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 618841,
-    "cost_usd": 0.12424,
+    "cost_usd": 0.122791,
     "call_count": 0,
     "estimated": false
   },
@@ -10580,7 +10680,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1107320,
-    "cost_usd": 2.780766,
+    "cost_usd": 2.748324,
     "call_count": 0,
     "estimated": false
   },
@@ -10590,7 +10690,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 506662,
-    "cost_usd": 1.214464,
+    "cost_usd": 1.200295,
     "call_count": 0,
     "estimated": false
   },
@@ -10600,7 +10700,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 96973,
-    "cost_usd": 0.64178,
+    "cost_usd": 0.634293,
     "call_count": 0,
     "estimated": false
   },
@@ -10610,7 +10710,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 152559,
-    "cost_usd": 0.047542,
+    "cost_usd": 0.046988,
     "call_count": 0,
     "estimated": false
   },
@@ -10620,7 +10720,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 32358,
-    "cost_usd": 0.215208,
+    "cost_usd": 0.212698,
     "call_count": 0,
     "estimated": false
   },
@@ -10630,7 +10730,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 84907,
-    "cost_usd": 0.562876,
+    "cost_usd": 0.556309,
     "call_count": 0,
     "estimated": false
   },
@@ -10640,7 +10740,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1223051,
-    "cost_usd": 0.357769,
+    "cost_usd": 0.353595,
     "call_count": 0,
     "estimated": false
   },
@@ -10650,7 +10750,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2430477,
-    "cost_usd": 5.017024,
+    "cost_usd": 4.958493,
     "call_count": 0,
     "estimated": false
   },
@@ -10660,7 +10760,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 12549649,
-    "cost_usd": 11.656948,
+    "cost_usd": 11.520953,
     "call_count": 0,
     "estimated": false
   },
@@ -10670,7 +10770,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 6913291,
-    "cost_usd": 1.90676,
+    "cost_usd": 1.884515,
     "call_count": 0,
     "estimated": false
   },
@@ -10680,7 +10780,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9456772,
-    "cost_usd": 6.870073,
+    "cost_usd": 6.789923,
     "call_count": 0,
     "estimated": false
   },
@@ -10690,7 +10790,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7864870,
-    "cost_usd": 6.30337,
+    "cost_usd": 6.229832,
     "call_count": 0,
     "estimated": false
   },
@@ -10700,7 +10800,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 26155201,
-    "cost_usd": 22.213316,
+    "cost_usd": 21.954166,
     "call_count": 0,
     "estimated": false
   },
@@ -10710,7 +10810,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 940233,
-    "cost_usd": 0.226604,
+    "cost_usd": 0.22396,
     "call_count": 0,
     "estimated": false
   },
@@ -10720,7 +10820,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 10542735,
-    "cost_usd": 9.312937,
+    "cost_usd": 9.204289,
     "call_count": 0,
     "estimated": false
   },
@@ -10730,7 +10830,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 5988402,
-    "cost_usd": 1.250917,
+    "cost_usd": 1.236323,
     "call_count": 0,
     "estimated": false
   },
@@ -10740,7 +10840,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9618918,
-    "cost_usd": 10.585438,
+    "cost_usd": 10.461944,
     "call_count": 0,
     "estimated": false
   },
@@ -10750,7 +10850,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 9795817,
-    "cost_usd": 2.069778,
+    "cost_usd": 2.045631,
     "call_count": 0,
     "estimated": false
   },
@@ -10760,7 +10860,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 15636588,
-    "cost_usd": 19.760223,
+    "cost_usd": 19.529692,
     "call_count": 0,
     "estimated": false
   },
@@ -10770,7 +10870,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 9596638,
-    "cost_usd": 1.817909,
+    "cost_usd": 1.796701,
     "call_count": 0,
     "estimated": false
   },
@@ -10780,7 +10880,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 24232971,
-    "cost_usd": 23.273219,
+    "cost_usd": 23.001704,
     "call_count": 0,
     "estimated": false
   },
@@ -10790,7 +10890,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 657691,
-    "cost_usd": 0.241539,
+    "cost_usd": 0.238721,
     "call_count": 0,
     "estimated": false
   },
@@ -10800,7 +10900,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 396952,
-    "cost_usd": 1.714203,
+    "cost_usd": 1.694205,
     "call_count": 0,
     "estimated": false
   },
@@ -10810,7 +10910,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 186850,
-    "cost_usd": 0.63247,
+    "cost_usd": 0.625091,
     "call_count": 0,
     "estimated": false
   },
@@ -10820,7 +10920,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 11501517,
-    "cost_usd": 11.238303,
+    "cost_usd": 11.107192,
     "call_count": 0,
     "estimated": false
   },
@@ -10830,7 +10930,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1387721,
-    "cost_usd": 0.314754,
+    "cost_usd": 0.311082,
     "call_count": 0,
     "estimated": false
   },
@@ -10840,7 +10940,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 23766658,
-    "cost_usd": 31.745566,
+    "cost_usd": 31.375208,
     "call_count": 0,
     "estimated": false
   },
@@ -10850,7 +10950,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1596732,
-    "cost_usd": 0.585817,
+    "cost_usd": 0.578982,
     "call_count": 0,
     "estimated": false
   },
@@ -10860,7 +10960,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 10823422,
-    "cost_usd": 15.970709,
+    "cost_usd": 15.784388,
     "call_count": 0,
     "estimated": false
   },
@@ -10870,7 +10970,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 65269,
-    "cost_usd": 0.028862,
+    "cost_usd": 0.028525,
     "call_count": 0,
     "estimated": false
   },
@@ -10880,7 +10980,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1089645,
-    "cost_usd": 3.024342,
+    "cost_usd": 2.989059,
     "call_count": 0,
     "estimated": false
   },
@@ -10890,7 +10990,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4541039,
-    "cost_usd": 6.581202,
+    "cost_usd": 6.504423,
     "call_count": 0,
     "estimated": false
   },
@@ -10900,7 +11000,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3275336,
-    "cost_usd": 3.78974,
+    "cost_usd": 3.745527,
     "call_count": 0,
     "estimated": false
   },
@@ -10910,7 +11010,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 16815295,
-    "cost_usd": 17.598215,
+    "cost_usd": 17.392907,
     "call_count": 0,
     "estimated": false
   },
@@ -10920,7 +11020,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 1902829,
-    "cost_usd": 0.398891,
+    "cost_usd": 0.394237,
     "call_count": 0,
     "estimated": false
   },
@@ -10930,7 +11030,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 8830009,
-    "cost_usd": 7.746584,
+    "cost_usd": 7.656209,
     "call_count": 0,
     "estimated": false
   },
@@ -10940,7 +11040,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4767323,
-    "cost_usd": 7.120801,
+    "cost_usd": 7.037727,
     "call_count": 0,
     "estimated": false
   },
@@ -10950,7 +11050,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 488581,
-    "cost_usd": 0.272266,
+    "cost_usd": 0.26909,
     "call_count": 0,
     "estimated": false
   },
@@ -10960,7 +11060,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 10794122,
-    "cost_usd": 9.895304,
+    "cost_usd": 9.779861,
     "call_count": 0,
     "estimated": false
   },
@@ -10970,7 +11070,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 955643,
-    "cost_usd": 1.612545,
+    "cost_usd": 1.593733,
     "call_count": 0,
     "estimated": false
   },
@@ -10980,7 +11080,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1729840,
-    "cost_usd": 2.942462,
+    "cost_usd": 2.908134,
     "call_count": 0,
     "estimated": false
   },
@@ -10990,7 +11090,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 7412018,
-    "cost_usd": 9.318295,
+    "cost_usd": 9.209584,
     "call_count": 0,
     "estimated": false
   },
@@ -11000,7 +11100,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 498123,
-    "cost_usd": 1.30221,
+    "cost_usd": 1.287018,
     "call_count": 0,
     "estimated": false
   },
@@ -11010,7 +11110,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 257119,
-    "cost_usd": 1.218026,
+    "cost_usd": 1.203816,
     "call_count": 0,
     "estimated": false
   },
@@ -11020,7 +11120,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 125098,
-    "cost_usd": 0.300594,
+    "cost_usd": 0.297087,
     "call_count": 0,
     "estimated": false
   },
@@ -11030,7 +11130,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 131635,
-    "cost_usd": 0.302467,
+    "cost_usd": 0.298939,
     "call_count": 0,
     "estimated": false
   },
@@ -11040,7 +11140,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 117983,
-    "cost_usd": 0.291147,
+    "cost_usd": 0.287751,
     "call_count": 0,
     "estimated": false
   },
@@ -11050,7 +11150,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4394143,
-    "cost_usd": 6.094198,
+    "cost_usd": 6.0231,
     "call_count": 0,
     "estimated": false
   },
@@ -11060,7 +11160,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9517821,
-    "cost_usd": 16.217759,
+    "cost_usd": 16.028556,
     "call_count": 0,
     "estimated": false
   },
@@ -11070,7 +11170,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2515430,
-    "cost_usd": 6.284492,
+    "cost_usd": 6.211174,
     "call_count": 0,
     "estimated": false
   },
@@ -11080,7 +11180,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 10490822,
-    "cost_usd": 12.209204,
+    "cost_usd": 12.066766,
     "call_count": 0,
     "estimated": false
   },
@@ -11090,7 +11190,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1542436,
-    "cost_usd": 2.361848,
+    "cost_usd": 2.334294,
     "call_count": 0,
     "estimated": false
   },
@@ -11100,7 +11200,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3809448,
-    "cost_usd": 6.009999,
+    "cost_usd": 5.939884,
     "call_count": 0,
     "estimated": false
   },
@@ -11110,7 +11210,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1232582,
-    "cost_usd": 2.619738,
+    "cost_usd": 2.589175,
     "call_count": 0,
     "estimated": false
   },
@@ -11120,7 +11220,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3241400,
-    "cost_usd": 5.846134,
+    "cost_usd": 5.777931,
     "call_count": 0,
     "estimated": false
   },
@@ -11130,7 +11230,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2012851,
-    "cost_usd": 2.699484,
+    "cost_usd": 2.66799,
     "call_count": 0,
     "estimated": false
   },
@@ -11140,7 +11240,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1232965,
-    "cost_usd": 2.148009,
+    "cost_usd": 2.12295,
     "call_count": 0,
     "estimated": false
   },
@@ -11150,7 +11250,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1526913,
-    "cost_usd": 2.334304,
+    "cost_usd": 2.307071,
     "call_count": 0,
     "estimated": false
   },
@@ -11160,7 +11260,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 467652,
-    "cost_usd": 1.291066,
+    "cost_usd": 1.276004,
     "call_count": 0,
     "estimated": false
   },
@@ -11170,7 +11270,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1697424,
-    "cost_usd": 2.472451,
+    "cost_usd": 2.443606,
     "call_count": 0,
     "estimated": false
   },
@@ -11180,7 +11280,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1654792,
-    "cost_usd": 2.434667,
+    "cost_usd": 2.406263,
     "call_count": 0,
     "estimated": false
   },
@@ -11190,7 +11290,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1325866,
-    "cost_usd": 2.019751,
+    "cost_usd": 1.996187,
     "call_count": 0,
     "estimated": false
   },
@@ -11200,7 +11300,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1503873,
-    "cost_usd": 2.245113,
+    "cost_usd": 2.218921,
     "call_count": 0,
     "estimated": false
   },
@@ -11210,7 +11310,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1704790,
-    "cost_usd": 2.307293,
+    "cost_usd": 2.280375,
     "call_count": 0,
     "estimated": false
   },
@@ -11220,7 +11320,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1017021,
-    "cost_usd": 1.782075,
+    "cost_usd": 1.761284,
     "call_count": 0,
     "estimated": false
   },
@@ -11230,7 +11330,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2484593,
-    "cost_usd": 4.188762,
+    "cost_usd": 4.139894,
     "call_count": 0,
     "estimated": false
   },
@@ -11240,7 +11340,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 364908,
-    "cost_usd": 0.99256,
+    "cost_usd": 0.98098,
     "call_count": 0,
     "estimated": false
   },
@@ -11250,7 +11350,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 14511560,
-    "cost_usd": 14.411968,
+    "cost_usd": 14.243832,
     "call_count": 0,
     "estimated": false
   },
@@ -11260,7 +11360,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 4159261,
-    "cost_usd": 5.67102,
+    "cost_usd": 5.604859,
     "call_count": 0,
     "estimated": false
   },
@@ -11270,7 +11370,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1433155,
-    "cost_usd": 2.149867,
+    "cost_usd": 2.124786,
     "call_count": 0,
     "estimated": false
   },
@@ -11280,7 +11380,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 3109531,
-    "cost_usd": 4.543075,
+    "cost_usd": 4.490074,
     "call_count": 0,
     "estimated": false
   },
@@ -11290,7 +11390,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 9109881,
-    "cost_usd": 16.247577,
+    "cost_usd": 16.058025,
     "call_count": 0,
     "estimated": false
   },
@@ -11300,7 +11400,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 6388207,
-    "cost_usd": 7.287267,
+    "cost_usd": 7.202251,
     "call_count": 0,
     "estimated": false
   },
@@ -11310,7 +11410,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-haiku-4-5",
     "total_tokens": 102959,
-    "cost_usd": 0.001181,
+    "cost_usd": 0.001167,
     "call_count": 0,
     "estimated": false
   },
@@ -11320,7 +11420,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 2643709,
-    "cost_usd": 5.138437,
+    "cost_usd": 5.07849,
     "call_count": 0,
     "estimated": false
   },
@@ -11330,7 +11430,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-haiku-4-5",
     "total_tokens": 249595,
-    "cost_usd": 0.022224,
+    "cost_usd": 0.021965,
     "call_count": 0,
     "estimated": false
   },
@@ -11340,7 +11440,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 125009,
-    "cost_usd": 0.4985,
+    "cost_usd": 0.492684,
     "call_count": 0,
     "estimated": false
   },
@@ -11350,7 +11450,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 79423,
-    "cost_usd": 0.106822,
+    "cost_usd": 0.105576,
     "call_count": 0,
     "estimated": false
   },
@@ -11360,7 +11460,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-opus-4-6",
     "total_tokens": 1369689,
-    "cost_usd": 1.877249,
+    "cost_usd": 1.855348,
     "call_count": 0,
     "estimated": false
   },
@@ -11370,7 +11470,7 @@ const HOURLY_DATA = [
     "provider": "anthropic",
     "model": "claude-sonnet-4-6",
     "total_tokens": 39104,
-    "cost_usd": 0.052178,
+    "cost_usd": 0.05157,
     "call_count": 0,
     "estimated": false
   }
